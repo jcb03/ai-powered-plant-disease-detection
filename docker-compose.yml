@@ -1,0 +1,68 @@
+version: '3.8'
+
+services:
+  backend:
+    build: 
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - DEBUG=true
+      - API_VERSION=v1
+      - CONFIDENCE_THRESHOLD=0.7
+    volumes:
+      - ./backend:/app
+      - ./backend/ml_models:/app/ml_models
+      - backend_logs:/app/logs
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    restart: unless-stopped
+    networks:
+      - plant-disease-network
+
+  frontend:
+    build: 
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "8501:8501"
+    environment:
+      - API_URL=http://backend:8000
+      - STREAMLIT_SERVER_HEADLESS=true
+      - STREAMLIT_SERVER_ENABLE_CORS=false
+    volumes:
+      - ./frontend:/app
+    depends_on:
+      backend:
+        condition: service_healthy
+    restart: unless-stopped
+    networks:
+      - plant-disease-network
+
+  model-training:
+    build: 
+      context: ./model_training
+      dockerfile: Dockerfile
+    volumes:
+      - ./model_training:/app
+      - ./backend/ml_models:/app/models
+      - training_data:/app/data
+    environment:
+      - PYTHONPATH=/app
+    profiles:
+      - training
+    networks:
+      - plant-disease-network
+
+volumes:
+  backend_logs:
+  training_data:
+
+networks:
+  plant-disease-network:
+    driver: bridge
