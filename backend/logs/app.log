@@ -1,0 +1,185 @@
+2025-06-23 02:19:25,658 - app.main - INFO - Starting Plant Disease Detection API v1.0.0
+2025-06-23 02:19:25,658 - app.main - INFO - Debug mode: False
+2025-06-23 02:19:25,658 - app.main - INFO - Model loaded: True
+2025-06-23 02:19:25,658 - app.main - INFO - Supported classes: 38
+2025-06-23 02:23:17,642 - app.main - INFO - Request: GET http://localhost:8000/api/v1/health
+2025-06-23 02:23:17,642 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 02:23:17,645 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 02:23:17,645 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 02:23:17,650 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 02:23:17,650 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 02:23:17,745 - app.main - INFO - Request: GET http://localhost:8000/api/v1/health
+2025-06-23 02:23:17,745 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 02:23:17,747 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 02:23:17,747 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 02:23:17,752 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 02:23:17,752 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 02:23:51,233 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 02:23:51,233 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 02:27:13,829 - app.main - INFO - Request: GET http://localhost:8000/api/v1/health
+2025-06-23 02:27:13,830 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 02:27:13,832 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 02:27:13,833 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 02:27:13,836 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 02:27:13,837 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 02:28:02,875 - app.main - INFO - Request: GET http://localhost:8000/api/v1/health
+2025-06-23 02:28:02,876 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 02:28:02,878 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 02:28:02,878 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 02:28:02,888 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 02:28:02,888 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 02:28:07,166 - app.main - INFO - Request: GET http://localhost:8000/api/v1/health
+2025-06-23 02:28:07,166 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 02:28:07,168 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 02:28:07,168 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 02:28:07,176 - app.main - INFO - Request: POST http://localhost:8000/api/v1/predict
+2025-06-23 02:28:07,177 - app.main - ERROR - HTTP Exception: 400 - File must be an image
+2025-06-23 02:28:07,177 - app.main - INFO - Response: 400 - 0.001s
+2025-06-23 02:28:07,179 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 02:28:07,180 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 02:28:18,424 - app.main - INFO - Request: GET http://localhost:8000/api/v1/health
+2025-06-23 02:28:18,425 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 02:28:18,426 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 02:28:18,427 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 02:28:18,434 - app.main - INFO - Request: POST http://localhost:8000/api/v1/predict
+2025-06-23 02:28:18,435 - app.main - ERROR - HTTP Exception: 400 - File must be an image
+2025-06-23 02:28:18,435 - app.main - INFO - Response: 400 - 0.001s
+2025-06-23 02:28:18,437 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 02:28:18,438 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 02:29:29,126 - app.main - INFO - Request: GET http://localhost:8000/api/v1/health
+2025-06-23 02:29:29,127 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 02:29:29,128 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 02:29:29,129 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 02:29:29,130 - app.main - INFO - Request: GET http://localhost:8000/api/v1/model/info
+2025-06-23 02:29:29,134 - app.main - INFO - Response: 200 - 0.004s
+2025-06-23 02:29:29,137 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 02:29:29,137 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 02:29:30,163 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 02:29:30,163 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 02:29:46,693 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 02:29:46,694 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 02:30:10,824 - app.main - INFO - Request: GET http://localhost:8000/api/v1/health
+2025-06-23 02:30:10,824 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 02:30:10,826 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 02:30:10,827 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 02:30:10,828 - app.main - INFO - Request: GET http://localhost:8000/api/v1/model/info
+2025-06-23 02:30:10,832 - app.main - INFO - Response: 200 - 0.004s
+2025-06-23 02:30:10,834 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 02:30:10,835 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 02:30:10,854 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 02:30:10,855 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 02:32:32,296 - app.main - INFO - Request: GET http://localhost:8000/api/v1/health
+2025-06-23 02:32:32,296 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 02:32:32,298 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 02:32:32,298 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 02:32:32,300 - app.main - INFO - Request: GET http://localhost:8000/api/v1/model/info
+2025-06-23 02:32:32,303 - app.main - INFO - Response: 200 - 0.003s
+2025-06-23 02:32:32,306 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 02:32:32,307 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 02:32:32,329 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 02:32:32,329 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 02:32:33,772 - app.main - INFO - Request: GET http://localhost:8000/api/v1/health
+2025-06-23 02:32:33,772 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 02:32:33,774 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 02:32:33,774 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 02:32:33,776 - app.main - INFO - Request: GET http://localhost:8000/api/v1/model/info
+2025-06-23 02:32:33,779 - app.main - INFO - Response: 200 - 0.003s
+2025-06-23 02:32:33,782 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 02:32:33,782 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 02:32:33,804 - app.main - INFO - Request: POST http://localhost:8000/api/v1/predict
+2025-06-23 02:32:33,805 - app.main - ERROR - HTTP Exception: 400 - File must be an image
+2025-06-23 02:32:33,805 - app.main - INFO - Response: 400 - 0.001s
+2025-06-23 02:32:33,808 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 02:32:33,808 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 02:32:37,169 - app.main - INFO - Request: GET http://localhost:8000/api/v1/predict
+2025-06-23 02:32:37,170 - app.main - INFO - Response: 405 - 0.001s
+2025-06-23 02:32:37,199 - app.main - INFO - Request: GET http://localhost:8000/favicon.ico
+2025-06-23 02:32:37,199 - app.main - INFO - Response: 404 - 0.001s
+2025-06-23 02:35:07,783 - app.main - INFO - Request: GET http://localhost:8000/api/v1/health
+2025-06-23 02:35:07,783 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 02:35:07,786 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 02:35:07,786 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 02:38:47,646 - app.main - INFO - Request: GET http://localhost:8000/api/v1/health
+2025-06-23 02:38:47,647 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 02:38:47,649 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 02:38:47,649 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 02:49:17,411 - app.main - INFO - Request: GET http://localhost:8000/api/v1/health
+2025-06-23 02:49:17,411 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 02:49:17,413 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 02:49:17,414 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 03:06:20,724 - app.main - INFO - Request: GET http://localhost:8000/api/v1/health
+2025-06-23 03:06:20,725 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 03:06:20,727 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 03:06:20,727 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 03:06:20,920 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 03:06:20,920 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 03:12:04,242 - app.main - INFO - Request: GET http://localhost:8000/api/v1/health
+2025-06-23 03:12:04,243 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 03:12:04,245 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 03:12:04,245 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 03:12:04,296 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 03:12:04,297 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 03:12:08,781 - app.main - INFO - Request: GET http://localhost:8000/api/v1/health
+2025-06-23 03:12:08,781 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 03:12:08,783 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 03:12:08,784 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 03:12:08,849 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 03:12:08,849 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 03:12:09,866 - app.main - INFO - Request: GET http://localhost:8000/api/v1/health
+2025-06-23 03:12:09,867 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 03:12:09,869 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 03:12:09,870 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 03:12:09,934 - app.main - INFO - Request: POST http://localhost:8000/api/v1/predict
+2025-06-23 03:12:09,936 - app.main - ERROR - HTTP Exception: 400 - File must be an image
+2025-06-23 03:12:09,936 - app.main - INFO - Response: 400 - 0.002s
+2025-06-23 03:12:09,940 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 03:12:09,941 - app.main - INFO - Response: 200 - 0.002s
+2025-06-23 03:24:56,406 - app.main - INFO - Request: GET http://localhost:8000/api/v1/health
+2025-06-23 03:24:56,407 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 03:24:56,410 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 03:24:56,410 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 03:24:56,472 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 03:24:56,472 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 03:28:45,669 - app.main - INFO - Request: GET http://localhost:8000/api/v1/health
+2025-06-23 03:28:45,669 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 03:28:45,672 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 03:28:45,672 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 03:28:45,730 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 03:28:45,730 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 03:28:48,730 - app.main - INFO - Request: GET http://localhost:8000/api/v1/health
+2025-06-23 03:28:48,730 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 03:28:48,733 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 03:28:48,734 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 03:28:48,801 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 03:28:48,802 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 03:28:50,038 - app.main - INFO - Request: GET http://localhost:8000/api/v1/health
+2025-06-23 03:28:50,038 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 03:28:50,041 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 03:28:50,042 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 03:28:50,103 - app.main - INFO - Request: POST http://localhost:8000/api/v1/predict
+2025-06-23 03:28:50,105 - app.main - ERROR - HTTP Exception: 400 - File must be an image
+2025-06-23 03:28:50,105 - app.main - INFO - Response: 400 - 0.002s
+2025-06-23 03:28:50,109 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 03:28:50,109 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 03:29:02,554 - app.main - INFO - Request: GET http://localhost:8000/api/v1/predict
+2025-06-23 03:29:02,554 - app.main - INFO - Response: 405 - 0.000s
+2025-06-23 03:29:06,016 - app.main - INFO - Request: GET http://localhost:8000/api/v1/predict
+2025-06-23 03:29:06,017 - app.main - INFO - Response: 405 - 0.001s
+2025-06-23 03:30:34,467 - app.main - INFO - Request: GET http://localhost:8000/api/v1/predict
+2025-06-23 03:30:34,468 - app.main - INFO - Response: 405 - 0.001s
+2025-06-23 03:41:51,312 - app.main - INFO - Shutting down application
+2025-06-23 03:41:55,814 - app.main - INFO - Starting Plant Disease Detection API v1.0.0
+2025-06-23 03:41:55,815 - app.main - INFO - Debug mode: False
+2025-06-23 03:41:55,815 - app.main - INFO - Model loaded: True
+2025-06-23 03:41:55,815 - app.main - INFO - Supported classes: 38
+2025-06-23 03:41:55,815 - app.main - INFO - Shutting down application
+2025-06-23 03:41:59,939 - app.main - INFO - Starting Plant Disease Detection API v1.0.0
+2025-06-23 03:41:59,939 - app.main - INFO - Debug mode: False
+2025-06-23 03:41:59,939 - app.main - INFO - Model loaded: True
+2025-06-23 03:41:59,939 - app.main - INFO - Supported classes: 38
+2025-06-23 03:42:10,374 - app.main - INFO - Shutting down application
+2025-06-23 03:42:14,800 - app.main - INFO - Starting Plant Disease Detection API v1.0.0
+2025-06-23 03:42:14,800 - app.main - INFO - Debug mode: False
+2025-06-23 03:42:14,800 - app.main - INFO - Model loaded: True
+2025-06-23 03:42:14,801 - app.main - INFO - Supported classes: 38
+2025-06-23 03:42:14,801 - app.main - INFO - Shutting down application

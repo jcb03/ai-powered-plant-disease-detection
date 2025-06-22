@@ -148,7 +148,7 @@ def render_about_page():
     with col1:
         st.markdown("""
         **📧 Email Support**
-        support@plantdisease.ai
+        jaichaudhary0303@gmail.com
         
         **🐛 Report Issues**
         GitHub Issues Page
