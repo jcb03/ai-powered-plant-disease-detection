@@ -1,7 +1,7 @@
 """
 Data preprocessing utilities for plant disease detection.
 """
-
+import math
 import os
 import shutil
 import random
@@ -218,7 +218,7 @@ class DataPreprocessor:
     
     def split_dataset(self, output_dir, train_ratio=0.7, val_ratio=0.2, test_ratio=0.1):
         """Split dataset into train, validation, and test sets."""
-        if train_ratio + val_ratio + test_ratio != 1.0:
+        if not math.isclose(train_ratio + val_ratio + test_ratio, 1.0, rel_tol=1e-9):
             raise ValueError("Split ratios must sum to 1.0")
         
         output_dir = Path(output_dir)
