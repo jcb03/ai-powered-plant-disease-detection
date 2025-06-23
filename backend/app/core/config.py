@@ -7,7 +7,7 @@ class Settings(BaseSettings):
     """Application settings and configuration."""
     
     # Basic app settings
-    app_name: str = "Plant Disease Detection API"
+    app_name: str = "Phytocognix API"
     app_version: str = "1.0.0"
     debug: bool = False
     api_version: str = "v1"
@@ -21,7 +21,8 @@ class Settings(BaseSettings):
         "http://localhost:8501",
         "http://127.0.0.1:8501",
         "https://*.streamlit.app",
-        "https://*.herokuapp.com"
+        "https://phytocognix.streamlit.app",
+        "https://*.onrender.com"
     ]
     
     # File upload settings
