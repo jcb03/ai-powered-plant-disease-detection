@@ -683,3 +683,91 @@
 2025-06-23 23:06:07,854 - app.main - INFO - Request: POST http://localhost:8000/api/v1/debug-prediction
 2025-06-23 23:06:07,916 - app.main - INFO - Response: 200 - 0.062s
 2025-06-23 23:11:12,622 - app.main - INFO - Shutting down application
+2025-06-23 23:14:42,954 - app.main - INFO - Starting Plant Disease Detection API v1.0.0
+2025-06-23 23:14:42,954 - app.main - INFO - Debug mode: True (forced for development)
+2025-06-23 23:14:42,954 - app.main - INFO - Model loaded: True
+2025-06-23 23:14:42,954 - app.main - INFO - Supported classes: 38
+2025-06-23 23:14:42,954 - app.main - INFO - API docs available at: /docs
+2025-06-23 23:14:42,954 - app.main - INFO - API endpoints available at: /api/v1/
+2025-06-23 23:14:50,832 - app.main - INFO - Request: GET http://localhost:8000/health
+2025-06-23 23:14:50,834 - app.main - INFO - Response: 200 - 0.002s
+2025-06-23 23:14:50,837 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 23:14:50,837 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 23:14:51,034 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 23:14:51,035 - app.main - INFO - Response: 200 - 0.002s
+2025-06-23 23:15:04,967 - app.main - INFO - Request: GET http://localhost:8000/health
+2025-06-23 23:15:04,967 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 23:15:04,969 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 23:15:04,969 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 23:15:05,016 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 23:15:05,017 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 23:15:06,530 - app.main - INFO - Request: GET http://localhost:8000/health
+2025-06-23 23:15:06,531 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 23:15:06,532 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 23:15:06,533 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 23:15:06,576 - app.main - INFO - Request: POST http://localhost:8000/api/v1/predict
+2025-06-23 23:15:06,646 - app.main - INFO - Response: 200 - 0.071s
+2025-06-23 23:15:06,668 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 23:15:06,669 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 23:25:15,316 - app.main - INFO - Shutting down application
+2025-06-23 23:25:19,135 - app.main - INFO - Starting Plant Disease Detection API v1.0.0
+2025-06-23 23:25:19,135 - app.main - INFO - Debug mode: True (forced for development)
+2025-06-23 23:25:19,135 - app.main - INFO - Model loaded: True
+2025-06-23 23:25:19,135 - app.main - INFO - Supported classes: 38
+2025-06-23 23:25:19,135 - app.main - INFO - API docs available at: /docs
+2025-06-23 23:25:19,135 - app.main - INFO - API endpoints available at: /api/v1/
+2025-06-23 23:25:19,136 - app.main - INFO - Shutting down application
+2025-06-23 23:25:22,870 - app.main - INFO - Starting Plant Disease Detection API v1.0.0
+2025-06-23 23:25:22,870 - app.main - INFO - Debug mode: True (forced for development)
+2025-06-23 23:25:22,870 - app.main - INFO - Model loaded: True
+2025-06-23 23:25:22,870 - app.main - INFO - Supported classes: 38
+2025-06-23 23:25:22,870 - app.main - INFO - API docs available at: /docs
+2025-06-23 23:25:22,871 - app.main - INFO - API endpoints available at: /api/v1/
+2025-06-23 23:25:22,871 - app.main - INFO - Shutting down application
+2025-06-23 23:25:38,862 - app.main - INFO - Starting Plant Disease Detection API v1.0.0
+2025-06-23 23:25:38,862 - app.main - INFO - Debug mode: True (forced for development)
+2025-06-23 23:25:38,862 - app.main - INFO - Model loaded: True
+2025-06-23 23:25:38,862 - app.main - INFO - Supported classes: 38
+2025-06-23 23:25:38,862 - app.main - INFO - API docs available at: /docs
+2025-06-23 23:25:38,862 - app.main - INFO - API endpoints available at: /api/v1/
+2025-06-23 23:25:49,878 - app.main - INFO - Request: GET http://localhost:8000/health
+2025-06-23 23:25:49,879 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 23:25:49,881 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 23:25:49,881 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 23:25:50,065 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 23:25:50,066 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 23:26:03,834 - app.main - INFO - Request: GET http://localhost:8000/health
+2025-06-23 23:26:03,834 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 23:26:03,836 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 23:26:03,836 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 23:26:03,883 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 23:26:03,883 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 23:26:05,100 - app.main - INFO - Request: GET http://localhost:8000/health
+2025-06-23 23:26:05,100 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 23:26:05,103 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 23:26:05,104 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 23:26:05,147 - app.main - INFO - Request: POST http://localhost:8000/api/v1/predict
+2025-06-23 23:26:05,213 - app.main - INFO - Response: 200 - 0.066s
+2025-06-23 23:26:05,236 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 23:26:05,236 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 23:26:42,301 - app.main - INFO - Request: GET http://localhost:8000/health
+2025-06-23 23:26:42,302 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 23:26:42,304 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 23:26:42,304 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 23:26:42,348 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 23:26:42,349 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 23:26:42,503 - app.main - INFO - Shutting down application
+2025-06-23 23:26:46,395 - app.main - INFO - Starting Plant Disease Detection API v1.0.0
+2025-06-23 23:26:46,395 - app.main - INFO - Debug mode: True (forced for development)
+2025-06-23 23:26:46,395 - app.main - INFO - Model loaded: True
+2025-06-23 23:26:46,395 - app.main - INFO - Supported classes: 38
+2025-06-23 23:26:46,395 - app.main - INFO - API docs available at: /docs
+2025-06-23 23:26:46,395 - app.main - INFO - API endpoints available at: /api/v1/
+2025-06-23 23:26:46,395 - app.main - INFO - Shutting down application
+2025-06-23 23:26:50,169 - app.main - INFO - Starting Plant Disease Detection API v1.0.0
+2025-06-23 23:26:50,169 - app.main - INFO - Debug mode: True (forced for development)
+2025-06-23 23:26:50,169 - app.main - INFO - Model loaded: True
+2025-06-23 23:26:50,169 - app.main - INFO - Supported classes: 38
+2025-06-23 23:26:50,169 - app.main - INFO - API docs available at: /docs
+2025-06-23 23:26:50,169 - app.main - INFO - API endpoints available at: /api/v1/
+2025-06-23 23:26:50,171 - app.main - INFO - Shutting down application

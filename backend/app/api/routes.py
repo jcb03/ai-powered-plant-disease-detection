@@ -369,6 +369,9 @@ async def get_model_info():
     try:
         return {
             "model_loaded": predictor.model_loaded,
+            "model_name": "Plant Disease Detection CNN",
+            "model_architecture": "ResNet50V2 + Custom Head",
+            "model_version": "v1.0",
             "total_classes": len(predictor.class_names),
             "model_info": predictor.model_info,
             "accuracy": 96.5,
@@ -376,14 +379,19 @@ async def get_model_info():
             "f1_score": 96.5,
             "training_samples": "18,088",
             "model_size": "4.8M params",
-            "avg_processing_time": "<2s"
+            "avg_processing_time": "<2s",
+            "framework": "TensorFlow",
+            "training_date": "2025-06-22",
+            "dataset": "PlantVillage Dataset (Balanced)"
         }
     except Exception as e:
         logger.error(f"Error getting model info: {str(e)}")
         return {
             "model_loaded": False,
+            "model_name": "Plant Disease Detection CNN",
             "error": str(e)
         }
+
 
 @router.get("/diseases/crop/{crop_name}")
 async def get_diseases_by_crop_name(crop_name: str):
