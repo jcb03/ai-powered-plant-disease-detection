@@ -212,7 +212,7 @@ def add_custom_footer():
     .microsoft:hover { background: #00A4EF; }
     
     .github { border-color: #00A4EF; }
-    .github:hover { background: #333; }
+    .github:hover { background: #0077B5; }
     
     @media (max-width: 768px) {
         .footer-content {
