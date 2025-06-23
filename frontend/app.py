@@ -29,8 +29,8 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded",
     menu_items={
-        'Get Help': 'https://github.com/your-repo/plant-disease-detection',
-        'Report a bug': 'https://github.com/your-repo/plant-disease-detection/issues',
+        'Get Help': 'https://github.com/jcb03/ai-powered-plant-disease-detection',
+        'Report a bug': 'https://github.com/jcb03/ai-powered-plant-disease-detection/issues',
         'About': "AI-powered plant disease detection system for farmers and gardeners."
     }
 )

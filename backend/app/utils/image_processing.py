@@ -13,7 +13,7 @@ logger = logging.getLogger(__name__)
 
 def preprocess_image(image_bytes: bytes, target_size: Tuple[int, int] = (224, 224)) -> np.ndarray:
     """
-    Preprocess image for model prediction.
+    Preprocess image for model prediction - EXACTLY as done during training.
     
     Args:
         image_bytes: Raw image bytes
@@ -30,14 +30,15 @@ def preprocess_image(image_bytes: bytes, target_size: Tuple[int, int] = (224, 22
         if image.mode != 'RGB':
             image = image.convert('RGB')
         
-        # Resize image maintaining aspect ratio
-        image = resize_with_padding(image, target_size)
+        # CRITICAL: Direct resize WITHOUT padding (this matches training)
+        # Your training used ImageDataGenerator which does direct resize
+        image = image.resize(target_size, Image.LANCZOS)
         
         # Convert to numpy array
-        image_array = np.array(image)
+        image_array = np.array(image, dtype=np.float32)
         
-        # Normalize pixel values to [0, 1]
-        image_array = image_array.astype(np.float32) / 255.0
+        # CRITICAL: Normalize pixel values to [0, 1] (matches training rescale=1./255)
+        image_array = image_array / 255.0
         
         # Add batch dimension
         image_array = np.expand_dims(image_array, axis=0)
@@ -48,16 +49,32 @@ def preprocess_image(image_bytes: bytes, target_size: Tuple[int, int] = (224, 22
         logger.error(f"Error preprocessing image: {str(e)}")
         raise ValueError(f"Failed to preprocess image: {str(e)}")
 
+def preprocess_image_with_padding(image_bytes: bytes, target_size: Tuple[int, int] = (224, 224)) -> np.ndarray:
+    """
+    Alternative preprocessing with padding (keep for comparison).
+    """
+    try:
+        image = Image.open(io.BytesIO(image_bytes))
+        
+        if image.mode != 'RGB':
+            image = image.convert('RGB')
+        
+        # Resize with padding (your current method)
+        image = resize_with_padding(image, target_size)
+        
+        image_array = np.array(image, dtype=np.float32)
+        image_array = image_array / 255.0
+        image_array = np.expand_dims(image_array, axis=0)
+        
+        return image_array
+        
+    except Exception as e:
+        logger.error(f"Error preprocessing image with padding: {str(e)}")
+        raise ValueError(f"Failed to preprocess image: {str(e)}")
+
 def resize_with_padding(image: Image.Image, target_size: Tuple[int, int]) -> Image.Image:
     """
     Resize image while maintaining aspect ratio and adding padding if necessary.
-    
-    Args:
-        image: PIL Image object
-        target_size: Target size (width, height)
-        
-    Returns:
-        Resized image with padding
     """
     # Calculate scaling factor
     scale = min(target_size[0] / image.width, target_size[1] / image.height)
@@ -67,10 +84,10 @@ def resize_with_padding(image: Image.Image, target_size: Tuple[int, int]) -> Ima
     new_height = int(image.height * scale)
     
     # Resize image
-    image = image.resize((new_width, new_height), Image.Resampling.LANCZOS)
+    image = image.resize((new_width, new_height), Image.LANCZOS)
     
     # Create new image with target size and paste resized image
-    new_image = Image.new('RGB', target_size, (0, 0, 0))
+    new_image = Image.new('RGB', target_size, (128, 128, 128))  # Gray padding
     paste_x = (target_size[0] - new_width) // 2
     paste_y = (target_size[1] - new_height) // 2
     new_image.paste(image, (paste_x, paste_y))
@@ -80,12 +97,6 @@ def resize_with_padding(image: Image.Image, target_size: Tuple[int, int]) -> Ima
 def enhance_image_quality(image_bytes: bytes) -> bytes:
     """
     Enhance image quality for better prediction accuracy.
-    
-    Args:
-        image_bytes: Raw image bytes
-    
-    Returns:
-        Enhanced image bytes
     """
     try:
         # Convert bytes to PIL Image
@@ -95,25 +106,22 @@ def enhance_image_quality(image_bytes: bytes) -> bytes:
         if image.mode != 'RGB':
             image = image.convert('RGB')
         
-        # Apply enhancement techniques
-        # 1. Brightness adjustment
+        # Apply MILD enhancement techniques (don't over-enhance)
+        # 1. Slight brightness adjustment
         enhancer = ImageEnhance.Brightness(image)
-        image = enhancer.enhance(1.1)
+        image = enhancer.enhance(1.05)  # Reduced from 1.1
         
-        # 2. Contrast enhancement
+        # 2. Mild contrast enhancement
         enhancer = ImageEnhance.Contrast(image)
-        image = enhancer.enhance(1.2)
+        image = enhancer.enhance(1.1)   # Reduced from 1.2
         
-        # 3. Color saturation
+        # 3. Slight color saturation
         enhancer = ImageEnhance.Color(image)
-        image = enhancer.enhance(1.1)
+        image = enhancer.enhance(1.05)  # Reduced from 1.1
         
-        # 4. Sharpness enhancement
+        # 4. Mild sharpness enhancement
         enhancer = ImageEnhance.Sharpness(image)
-        image = enhancer.enhance(1.1)
-        
-        # 5. Noise reduction using PIL filter
-        image = image.filter(ImageFilter.MedianFilter(size=3))
+        image = enhancer.enhance(1.05)  # Reduced from 1.1
         
         # Convert back to bytes
         output = io.BytesIO()
@@ -127,12 +135,6 @@ def enhance_image_quality(image_bytes: bytes) -> bytes:
 def enhance_image_opencv(image_bytes: bytes) -> bytes:
     """
     Advanced image enhancement using OpenCV.
-    
-    Args:
-        image_bytes: Raw image bytes
-    
-    Returns:
-        Enhanced image bytes
     """
     try:
         # Convert bytes to numpy array
@@ -142,23 +144,17 @@ def enhance_image_opencv(image_bytes: bytes) -> bytes:
         if image is None:
             raise ValueError("Could not decode image")
         
-        # Apply advanced enhancement techniques
-        # 1. Bilateral filter for noise reduction while preserving edges
-        image = cv2.bilateralFilter(image, 9, 75, 75)
+        # Apply MILD enhancement techniques
+        # 1. Mild bilateral filter for noise reduction
+        image = cv2.bilateralFilter(image, 5, 50, 50)  # Reduced intensity
         
-        # 2. CLAHE (Contrast Limited Adaptive Histogram Equalization)
+        # 2. Mild CLAHE
         lab = cv2.cvtColor(image, cv2.COLOR_BGR2LAB)
         l, a, b = cv2.split(lab)
-        clahe = cv2.createCLAHE(clipLimit=3.0, tileGridSize=(8, 8))
+        clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8, 8))  # Reduced clip limit
         l = clahe.apply(l)
         enhanced = cv2.merge([l, a, b])
         enhanced = cv2.cvtColor(enhanced, cv2.COLOR_LAB2BGR)
-        
-        # 3. Gamma correction for brightness adjustment
-        gamma = 1.2
-        inv_gamma = 1.0 / gamma
-        table = np.array([((i / 255.0) ** inv_gamma) * 255 for i in np.arange(0, 256)]).astype("uint8")
-        enhanced = cv2.LUT(enhanced, table)
         
         # Convert back to bytes
         _, buffer = cv2.imencode('.jpg', enhanced, [cv2.IMWRITE_JPEG_QUALITY, 95])
@@ -166,17 +162,11 @@ def enhance_image_opencv(image_bytes: bytes) -> bytes:
         
     except Exception as e:
         logger.error(f"Error in OpenCV enhancement: {str(e)}")
-        return image_bytes  # Return original if enhancement fails
+        return image_bytes
 
 def validate_plant_image(image_bytes: bytes) -> Tuple[bool, str]:
     """
     Validate if the uploaded image is likely a plant image.
-    
-    Args:
-        image_bytes: Raw image bytes
-    
-    Returns:
-        Tuple of (is_valid, message)
     """
     try:
         image = Image.open(io.BytesIO(image_bytes))
@@ -196,7 +186,6 @@ def validate_plant_image(image_bytes: bytes) -> Tuple[bool, str]:
         image_array = np.array(image)
         
         # Basic color analysis for plant detection
-        # Calculate color channel statistics
         mean_red = np.mean(image_array[:, :, 0])
         mean_green = np.mean(image_array[:, :, 1])
         mean_blue = np.mean(image_array[:, :, 2])
@@ -208,23 +197,16 @@ def validate_plant_image(image_bytes: bytes) -> Tuple[bool, str]:
         else:
             green_ratio = 0
         
-        # Check for sufficient green content
-        if green_ratio < 0.25:
+        # More lenient green content check
+        if green_ratio < 0.2:  # Reduced from 0.25
             return False, "Image may not contain plant material. Please ensure the image shows plant leaves or foliage."
         
         # Check for image quality (not too dark or too bright)
         brightness = np.mean(image_array)
-        if brightness < 30:
+        if brightness < 20:  # More lenient
             return False, "Image is too dark. Please take a photo with better lighting."
-        elif brightness > 225:
+        elif brightness > 235:  # More lenient
             return False, "Image is too bright or overexposed. Please adjust lighting."
-        
-        # Check for blur (using Laplacian variance)
-        gray = cv2.cvtColor(image_array, cv2.COLOR_RGB2GRAY)
-        blur_score = cv2.Laplacian(gray, cv2.CV_64F).var()
-        
-        if blur_score < 100:
-            return False, "Image appears to be blurry. Please take a clearer photo."
         
         return True, "Image validation passed."
         
@@ -235,12 +217,6 @@ def validate_plant_image(image_bytes: bytes) -> Tuple[bool, str]:
 def extract_image_metadata(image_bytes: bytes) -> dict:
     """
     Extract metadata from image for analysis.
-    
-    Args:
-        image_bytes: Raw image bytes
-        
-    Returns:
-        Dictionary containing image metadata
     """
     try:
         image = Image.open(io.BytesIO(image_bytes))
@@ -279,19 +255,12 @@ def extract_image_metadata(image_bytes: bytes) -> dict:
 def create_image_thumbnail(image_bytes: bytes, size: Tuple[int, int] = (150, 150)) -> bytes:
     """
     Create a thumbnail of the image.
-    
-    Args:
-        image_bytes: Raw image bytes
-        size: Thumbnail size (width, height)
-        
-    Returns:
-        Thumbnail image bytes
     """
     try:
         image = Image.open(io.BytesIO(image_bytes))
         
         # Create thumbnail
-        image.thumbnail(size, Image.Resampling.LANCZOS)
+        image.thumbnail(size, Image.LANCZOS)
         
         # Convert back to bytes
         output = io.BytesIO()
@@ -301,3 +270,24 @@ def create_image_thumbnail(image_bytes: bytes, size: Tuple[int, int] = (150, 150
     except Exception as e:
         logger.error(f"Error creating thumbnail: {str(e)}")
         return image_bytes
+
+# Debug function to test preprocessing
+def debug_preprocessing(image_bytes: bytes):
+    """
+    Debug function to compare preprocessing methods.
+    """
+    try:
+        # Test both methods
+        direct_resize = preprocess_image(image_bytes)
+        with_padding = preprocess_image_with_padding(image_bytes)
+        
+        logger.info(f"Direct resize shape: {direct_resize.shape}")
+        logger.info(f"With padding shape: {with_padding.shape}")
+        logger.info(f"Direct resize range: [{direct_resize.min():.3f}, {direct_resize.max():.3f}]")
+        logger.info(f"With padding range: [{with_padding.min():.3f}, {with_padding.max():.3f}]")
+        
+        return direct_resize, with_padding
+        
+    except Exception as e:
+        logger.error(f"Debug preprocessing failed: {str(e)}")
+        return None, None

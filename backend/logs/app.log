@@ -446,3 +446,90 @@
 2025-06-23 04:21:25,018 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
 2025-06-23 04:21:25,019 - app.main - INFO - Response: 200 - 0.001s
 2025-06-23 04:22:26,044 - app.main - INFO - Shutting down application
+2025-06-23 21:13:39,097 - app.main - INFO - Starting Plant Disease Detection API v1.0.0
+2025-06-23 21:13:39,097 - app.main - INFO - Debug mode: False
+2025-06-23 21:13:39,097 - app.main - INFO - Model loaded: True
+2025-06-23 21:13:39,097 - app.main - INFO - Supported classes: 38
+2025-06-23 21:14:09,796 - app.main - INFO - Request: GET http://localhost:8000/health
+2025-06-23 21:14:09,796 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 21:14:09,799 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 21:14:09,799 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 21:14:10,050 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 21:14:10,051 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 21:15:00,232 - app.main - INFO - Request: GET http://localhost:8000/health
+2025-06-23 21:15:00,233 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 21:15:00,234 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 21:15:00,235 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 21:15:00,275 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 21:15:00,275 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 21:20:46,962 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 21:20:46,962 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 21:21:48,199 - app.main - INFO - Request: GET http://localhost:8000/health
+2025-06-23 21:21:48,199 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 21:21:48,202 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 21:21:48,202 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 21:21:48,247 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 21:21:48,248 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 21:24:47,218 - app.main - INFO - Request: GET http://localhost:8000/health
+2025-06-23 21:24:47,218 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 21:24:47,220 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 21:24:47,220 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 21:24:47,265 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 21:24:47,265 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 21:25:23,702 - app.main - INFO - Request: GET http://localhost:8000/health
+2025-06-23 21:25:23,703 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 21:25:23,707 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 21:25:23,707 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 21:25:23,750 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 21:25:23,751 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 21:28:19,403 - app.main - INFO - Request: GET http://localhost:8000/health
+2025-06-23 21:28:19,404 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 21:28:19,406 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 21:28:19,407 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 21:28:19,452 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 21:28:19,453 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 21:29:08,247 - app.main - INFO - Request: GET http://localhost:8000/health
+2025-06-23 21:29:08,247 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 21:29:08,250 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 21:29:08,250 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 21:29:08,311 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 21:29:08,311 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 21:29:10,869 - app.main - INFO - Request: GET http://localhost:8000/health
+2025-06-23 21:29:10,870 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 21:29:10,872 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 21:29:10,872 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 21:29:10,922 - app.main - INFO - Request: POST http://localhost:8000/api/v1/predict
+2025-06-23 21:29:11,004 - app.main - INFO - Response: 200 - 0.082s
+2025-06-23 21:29:11,042 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 21:29:11,043 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 21:29:15,529 - app.main - INFO - Request: GET http://localhost:8000/health
+2025-06-23 21:29:15,529 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 21:29:15,532 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 21:29:15,532 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 21:29:15,576 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 21:29:15,576 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 21:29:35,381 - app.main - INFO - Request: GET http://localhost:8000/health
+2025-06-23 21:29:35,382 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 21:29:35,384 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 21:29:35,384 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 21:29:35,439 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 21:29:35,440 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 21:29:37,547 - app.main - INFO - Request: GET http://localhost:8000/health
+2025-06-23 21:29:37,548 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 21:29:37,550 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 21:29:37,550 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 21:29:37,601 - app.main - INFO - Request: POST http://localhost:8000/api/v1/predict
+2025-06-23 21:29:37,663 - app.main - INFO - Response: 200 - 0.062s
+2025-06-23 21:29:37,670 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 21:29:37,671 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 21:39:25,946 - app.main - INFO - Shutting down application
+2025-06-23 21:39:30,461 - app.main - INFO - Starting Plant Disease Detection API v1.0.0
+2025-06-23 21:39:30,461 - app.main - INFO - Debug mode: False
+2025-06-23 21:39:30,462 - app.main - INFO - Model loaded: True
+2025-06-23 21:39:30,462 - app.main - INFO - Supported classes: 38
+2025-06-23 21:39:40,284 - app.main - INFO - Shutting down application
+2025-06-23 21:39:44,070 - app.main - INFO - Starting Plant Disease Detection API v1.0.0
+2025-06-23 21:39:44,070 - app.main - INFO - Debug mode: False
+2025-06-23 21:39:44,070 - app.main - INFO - Model loaded: True
+2025-06-23 21:39:44,070 - app.main - INFO - Supported classes: 38
+2025-06-23 21:43:57,185 - app.main - INFO - Shutting down application

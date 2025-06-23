@@ -190,6 +190,77 @@ async def predict_disease(
         logger.error(f"Prediction failed: {str(e)}")
         raise HTTPException(status_code=500, detail=f"Prediction failed: {str(e)}")
 
+@router.post("/debug-prediction")
+async def debug_prediction_detailed(file: UploadFile = File(...)):
+    """
+    Debug prediction with full details to identify Unknown Disease issues.
+    
+    Args:
+        file: Uploaded image file
+    
+    Returns:
+        Detailed debug information about the prediction process
+    """
+    try:
+        # Read image bytes
+        image_bytes = await file.read()
+        
+        # Get debug info from predictor
+        debug_result = predictor.debug_prediction(image_bytes)
+        
+        # Add file information
+        debug_result.update({
+            "filename": file.filename,
+            "file_size": len(image_bytes),
+            "content_type": file.content_type
+        })
+        
+        return debug_result
+        
+    except Exception as e:
+        logger.error(f"Debug prediction failed: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Debug prediction failed: {str(e)}")
+
+@router.post("/test-preprocessing")
+async def test_preprocessing_methods(file: UploadFile = File(...)):
+    """
+    Test both preprocessing methods to compare results.
+    
+    Args:
+        file: Uploaded image file
+    
+    Returns:
+        Comparison of direct resize vs padding preprocessing
+    """
+    try:
+        # Read image bytes
+        image_bytes = await file.read()
+        
+        # Test both preprocessing methods
+        result = predictor.test_preprocessing_methods(image_bytes)
+        
+        # Add file information
+        result.update({
+            "filename": file.filename,
+            "file_size": len(image_bytes),
+            "content_type": file.content_type
+        })
+        
+        return result
+        
+    except Exception as e:
+        logger.error(f"Preprocessing test failed: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Preprocessing test failed: {str(e)}")
+
+@router.get("/model/debug")
+async def get_model_debug_info():
+    """Get detailed model debug information."""
+    try:
+        return predictor.get_model_summary()
+    except Exception as e:
+        logger.error(f"Error getting model debug info: {str(e)}")
+        raise HTTPException(status_code=500, detail=str(e))
+
 @router.post("/predict/batch")
 async def batch_predict(
     files: List[UploadFile] = File(...),

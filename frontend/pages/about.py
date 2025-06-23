@@ -158,7 +158,8 @@ def render_about_page():
         st.markdown("""
         **📚 Documentation**
         User Guide & API Docs
-        
+        https://github.com/jcb03/ai-powered-plant-disease-detection
+                    
         **💡 Feature Requests**
         GitHub Discussions
         """)
@@ -177,8 +178,8 @@ def render_about_page():
     
     st.markdown("""
     - **Application Version**: 1.0.0
-    - **Model Version**: 2024.1
-    - **Last Updated**: June 2024
+    - **Model Version**: 2025.1
+    - **Last Updated**: June 2025
     - **Python Version**: 3.11+
     - **TensorFlow Version**: 2.12.0
     """)
