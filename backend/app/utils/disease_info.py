@@ -158,7 +158,255 @@ DISEASE_INFO = {
         ]
     },
     
-    # GRAPE DISEASES - MISSING SECTION ADDED
+    # BLUEBERRY DISEASES
+    "Blueberry___healthy": {
+        "disease_name": "Healthy Blueberry",
+        "scientific_name": "N/A",
+        "crop": "Blueberry",
+        "severity": "None",
+        "description": "Your blueberry plant appears healthy with vibrant foliage and no disease symptoms!",
+        "symptoms": [
+            "Green, healthy leaves",
+            "No visible disease symptoms",
+            "Normal growth and berry development",
+            "Good plant vigor"
+        ],
+        "causes": ["Plant is healthy"],
+        "treatment": ["Continue current care practices"],
+        "prevention": [
+            "Maintain proper soil pH (4.5-5.5)",
+            "Ensure adequate drainage",
+            "Regular pruning for air circulation",
+            "Monitor for pests and diseases",
+            "Proper fertilization"
+        ],
+        "organic_treatment": [
+            "Continue organic practices",
+            "Maintain acidic soil conditions",
+            "Use organic mulch",
+            "Regular monitoring"
+        ]
+    },
+    
+    # CHERRY DISEASES
+    "Cherry_(including_sour)___Powdery_mildew": {
+        "disease_name": "Cherry Powdery Mildew",
+        "scientific_name": "Podosphaera clandestina",
+        "crop": "Cherry",
+        "severity": "Moderate",
+        "description": "A fungal disease causing white powdery growth on cherry leaves and shoots.",
+        "symptoms": [
+            "White powdery coating on leaves",
+            "Distorted and curled leaves",
+            "Stunted shoot growth",
+            "Premature leaf drop",
+            "Reduced fruit quality"
+        ],
+        "causes": [
+            "Podosphaera clandestina fungus",
+            "High humidity with dry conditions",
+            "Poor air circulation",
+            "Overcrowded plantings"
+        ],
+        "treatment": [
+            "Apply sulfur-based fungicides",
+            "Use systemic fungicides like myclobutanil",
+            "Improve air circulation",
+            "Remove infected plant material",
+            "Apply horticultural oils"
+        ],
+        "prevention": [
+            "Plant resistant cherry varieties",
+            "Ensure proper spacing",
+            "Prune for good air circulation",
+            "Avoid overhead watering",
+            "Regular monitoring"
+        ],
+        "organic_treatment": [
+            "Sulfur dust or spray",
+            "Baking soda solution",
+            "Neem oil application",
+            "Proper pruning practices"
+        ]
+    },
+    
+    "Cherry_(including_sour)___healthy": {
+        "disease_name": "Healthy Cherry",
+        "scientific_name": "N/A",
+        "crop": "Cherry",
+        "severity": "None",
+        "description": "Your cherry tree appears healthy with no visible disease symptoms!",
+        "symptoms": [
+            "Green, healthy foliage",
+            "No disease symptoms visible",
+            "Normal growth and fruit development",
+            "Good tree vigor"
+        ],
+        "causes": ["Plant is healthy"],
+        "treatment": ["Continue current care routine"],
+        "prevention": [
+            "Maintain proper watering",
+            "Regular pruning for structure",
+            "Monitor for pests and diseases",
+            "Ensure adequate nutrition",
+            "Good orchard sanitation"
+        ],
+        "organic_treatment": [
+            "Continue organic practices",
+            "Maintain soil health",
+            "Use beneficial insects",
+            "Regular monitoring"
+        ]
+    },
+    
+    # CORN DISEASES
+    "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot": {
+        "disease_name": "Corn Gray Leaf Spot",
+        "scientific_name": "Cercospora zeae-maydis",
+        "crop": "Corn",
+        "severity": "High",
+        "description": "A fungal disease causing rectangular gray lesions on corn leaves.",
+        "symptoms": [
+            "Rectangular gray to tan lesions",
+            "Lesions parallel to leaf veins",
+            "Yellow halos around spots",
+            "Premature leaf death",
+            "Reduced photosynthesis"
+        ],
+        "causes": [
+            "Cercospora zeae-maydis fungus",
+            "Warm, humid weather",
+            "High relative humidity",
+            "Infected crop residue"
+        ],
+        "treatment": [
+            "Apply fungicides at first symptoms",
+            "Use resistant corn hybrids",
+            "Improve field drainage",
+            "Remove infected plant debris"
+        ],
+        "prevention": [
+            "Crop rotation with non-host crops",
+            "Use resistant varieties",
+            "Proper field sanitation",
+            "Balanced fertilization"
+        ],
+        "organic_treatment": [
+            "Biological control agents",
+            "Crop rotation",
+            "Organic fungicide applications",
+            "Soil health improvement"
+        ]
+    },
+    
+    "Corn_(maize)___Common_rust_": {
+        "disease_name": "Corn Common Rust",
+        "scientific_name": "Puccinia sorghi",
+        "crop": "Corn",
+        "severity": "Moderate",
+        "description": "A fungal disease causing reddish-brown pustules on corn leaves.",
+        "symptoms": [
+            "Small, oval reddish-brown pustules",
+            "Pustules on both leaf surfaces",
+            "Leaves may turn yellow",
+            "Premature leaf death",
+            "Reduced plant vigor"
+        ],
+        "causes": [
+            "Puccinia sorghi fungus",
+            "Cool, moist weather",
+            "High humidity",
+            "Wind-dispersed spores"
+        ],
+        "treatment": [
+            "Apply fungicides if severe",
+            "Use resistant corn varieties",
+            "Monitor weather conditions",
+            "Remove infected plant material"
+        ],
+        "prevention": [
+            "Plant resistant hybrids",
+            "Proper field sanitation",
+            "Monitor environmental conditions",
+            "Balanced plant nutrition"
+        ],
+        "organic_treatment": [
+            "Resistant variety selection",
+            "Cultural control methods",
+            "Organic fungicides",
+            "Field sanitation"
+        ]
+    },
+    
+    "Corn_(maize)___Northern_Leaf_Blight": {
+        "disease_name": "Northern Corn Leaf Blight",
+        "scientific_name": "Exserohilum turcicum",
+        "crop": "Corn",
+        "severity": "High",
+        "description": "A fungal disease causing significant yield losses in corn crops.",
+        "symptoms": [
+            "Long, elliptical lesions on leaves",
+            "Gray-green to tan colored spots",
+            "Lesions may have dark borders",
+            "Premature leaf death",
+            "Reduced photosynthesis"
+        ],
+        "causes": [
+            "Exserohilum turcicum fungus",
+            "Warm, humid weather",
+            "Poor air circulation",
+            "Infected crop residue"
+        ],
+        "treatment": [
+            "Apply fungicides at first sign",
+            "Use resistant corn varieties",
+            "Improve field drainage",
+            "Remove infected plant debris"
+        ],
+        "prevention": [
+            "Crop rotation",
+            "Use resistant hybrids",
+            "Proper field sanitation",
+            "Balanced fertilization"
+        ],
+        "organic_treatment": [
+            "Biological control agents",
+            "Crop rotation with non-host plants",
+            "Organic fungicide applications",
+            "Soil health improvement"
+        ]
+    },
+    
+    "Corn_(maize)___healthy": {
+        "disease_name": "Healthy Corn",
+        "scientific_name": "N/A",
+        "crop": "Corn",
+        "severity": "None",
+        "description": "Your corn plant appears healthy with no visible disease symptoms!",
+        "symptoms": [
+            "Green, healthy leaves",
+            "No disease symptoms visible",
+            "Normal growth and development",
+            "Good plant vigor"
+        ],
+        "causes": ["Plant is healthy"],
+        "treatment": ["Continue current management practices"],
+        "prevention": [
+            "Maintain proper fertilization",
+            "Ensure adequate water supply",
+            "Monitor for pests and diseases",
+            "Practice crop rotation",
+            "Use quality seeds"
+        ],
+        "organic_treatment": [
+            "Continue organic practices",
+            "Maintain soil health",
+            "Integrated pest management",
+            "Regular monitoring"
+        ]
+    },
+    
+    # GRAPE DISEASES
     "Grape___Black_rot": {
         "disease_name": "Grape Black Rot",
         "scientific_name": "Guignardia bidwellii",
@@ -310,18 +558,246 @@ DISEASE_INFO = {
             "Natural disease prevention methods"
         ]
     },
-
-    # Tomato diseases
-    "Tomato___Late_blight": {
-        "disease_name": "Tomato Late Blight",
-        "scientific_name": "Phytophthora infestans",
-        "crop": "Tomato",
+    
+    # ORANGE DISEASES
+    "Orange___Haunglongbing_(Citrus_greening)": {
+        "disease_name": "Citrus Greening (HLB)",
+        "scientific_name": "Candidatus Liberibacter asiaticus",
+        "crop": "Orange",
         "severity": "Very High",
-        "description": "A devastating disease that can destroy entire tomato crops quickly in favorable conditions.",
+        "description": "A devastating bacterial disease transmitted by Asian citrus psyllid, causing tree decline and death.",
+        "symptoms": [
+            "Yellow shoots and branches",
+            "Mottled, yellowing leaves",
+            "Small, lopsided fruit",
+            "Bitter, unusable fruit",
+            "Tree decline and death"
+        ],
+        "causes": [
+            "Candidatus Liberibacter asiaticus bacteria",
+            "Asian citrus psyllid transmission",
+            "Infected plant material",
+            "Poor tree health"
+        ],
+        "treatment": [
+            "Remove infected trees immediately",
+            "Control psyllid populations",
+            "Apply systemic antibiotics (limited effectiveness)",
+            "Improve tree nutrition",
+            "No cure available - prevention is key"
+        ],
+        "prevention": [
+            "Control Asian citrus psyllid",
+            "Use certified disease-free nursery stock",
+            "Regular monitoring and early detection",
+            "Quarantine measures",
+            "Remove infected trees promptly"
+        ],
+        "organic_treatment": [
+            "Beneficial insect release",
+            "Physical removal of infected trees",
+            "Psyllid monitoring and control",
+            "Tree health maintenance"
+        ]
+    },
+    
+    # PEACH DISEASES
+    "Peach___Bacterial_spot": {
+        "disease_name": "Peach Bacterial Spot",
+        "scientific_name": "Xanthomonas arboricola",
+        "crop": "Peach",
+        "severity": "High",
+        "description": "A bacterial disease causing spots on leaves and fruit of peach trees.",
+        "symptoms": [
+            "Small, dark spots on leaves",
+            "Spots have yellow halos",
+            "Fruit develops raised, rough spots",
+            "Premature leaf drop",
+            "Reduced fruit quality"
+        ],
+        "causes": [
+            "Xanthomonas arboricola bacteria",
+            "Warm, wet weather",
+            "Overhead irrigation",
+            "Wounds from insects or hail",
+            "Contaminated pruning tools"
+        ],
+        "treatment": [
+            "Apply copper-based bactericides",
+            "Remove infected plant material",
+            "Improve air circulation",
+            "Use drip irrigation",
+            "Apply preventive sprays"
+        ],
+        "prevention": [
+            "Plant resistant varieties",
+            "Avoid overhead watering",
+            "Proper pruning for air circulation",
+            "Disinfect tools between trees",
+            "Remove fallen leaves and debris"
+        ],
+        "organic_treatment": [
+            "Copper sulfate applications",
+            "Proper sanitation practices",
+            "Cultural control methods",
+            "Beneficial bacteria applications"
+        ]
+    },
+    
+    "Peach___healthy": {
+        "disease_name": "Healthy Peach",
+        "scientific_name": "N/A",
+        "crop": "Peach",
+        "severity": "None",
+        "description": "Your peach tree appears healthy with no visible disease symptoms!",
+        "symptoms": [
+            "Green, healthy foliage",
+            "No disease symptoms visible",
+            "Normal growth and fruit development",
+            "Good tree vigor"
+        ],
+        "causes": ["Plant is healthy"],
+        "treatment": ["Continue current care routine"],
+        "prevention": [
+            "Maintain proper watering",
+            "Regular pruning for structure",
+            "Monitor for pests and diseases",
+            "Ensure adequate nutrition",
+            "Good orchard sanitation"
+        ],
+        "organic_treatment": [
+            "Continue organic practices",
+            "Maintain soil health",
+            "Use beneficial insects",
+            "Regular monitoring"
+        ]
+    },
+    
+    # PEPPER DISEASES
+    "Pepper,_bell___Bacterial_spot": {
+        "disease_name": "Bell Pepper Bacterial Spot",
+        "scientific_name": "Xanthomonas euvesicatoria",
+        "crop": "Bell Pepper",
+        "severity": "High",
+        "description": "A bacterial disease causing spots on leaves, stems, and fruit of bell pepper plants.",
+        "symptoms": [
+            "Small, dark brown spots on leaves",
+            "Spots have yellow halos",
+            "Raised, scabby spots on fruit",
+            "Premature leaf drop",
+            "Reduced fruit quality and yield"
+        ],
+        "causes": [
+            "Xanthomonas euvesicatoria bacteria",
+            "Warm, humid weather",
+            "Overhead watering",
+            "Contaminated seeds or transplants",
+            "Wounds from insects or tools"
+        ],
+        "treatment": [
+            "Apply copper-based bactericides",
+            "Remove infected plant material",
+            "Improve air circulation",
+            "Use drip irrigation",
+            "Apply preventive sprays"
+        ],
+        "prevention": [
+            "Use certified disease-free seeds",
+            "Avoid overhead watering",
+            "Rotate crops annually",
+            "Disinfect tools between plants",
+            "Plant resistant varieties"
+        ],
+        "organic_treatment": [
+            "Copper sulfate applications",
+            "Proper sanitation practices",
+            "Beneficial bacteria applications",
+            "Cultural control methods"
+        ]
+    },
+    
+    "Pepper,_bell___healthy": {
+        "disease_name": "Healthy Bell Pepper",
+        "scientific_name": "N/A",
+        "crop": "Bell Pepper",
+        "severity": "None",
+        "description": "Your bell pepper plant appears healthy with no visible disease symptoms!",
+        "symptoms": [
+            "Green, healthy foliage",
+            "No disease symptoms visible",
+            "Normal growth and fruit development",
+            "Good plant vigor"
+        ],
+        "causes": ["Plant is healthy"],
+        "treatment": ["Continue current care routine"],
+        "prevention": [
+            "Maintain consistent watering",
+            "Provide adequate support",
+            "Monitor regularly for pests and diseases",
+            "Ensure proper nutrition",
+            "Maintain good air circulation"
+        ],
+        "organic_treatment": [
+            "Continue organic gardening practices",
+            "Regular soil amendments",
+            "Companion planting",
+            "Natural pest management"
+        ]
+    },
+    
+    # POTATO DISEASES
+    "Potato___Early_blight": {
+        "disease_name": "Potato Early Blight",
+        "scientific_name": "Alternaria solani",
+        "crop": "Potato",
+        "severity": "Moderate",
+        "description": "A common fungal disease affecting potato plants, especially older leaves.",
+        "symptoms": [
+            "Brown spots with concentric rings on leaves",
+            "Yellowing and dropping of lower leaves",
+            "Dark, sunken spots on tubers",
+            "Stem lesions near soil line",
+            "Reduced yield"
+        ],
+        "causes": [
+            "Alternaria solani fungus",
+            "Warm, humid conditions",
+            "Plant stress",
+            "Poor nutrition",
+            "Overhead watering"
+        ],
+        "treatment": [
+            "Apply fungicides containing chlorothalonil",
+            "Remove affected leaves",
+            "Improve air circulation",
+            "Mulch around plants",
+            "Ensure proper nutrition"
+        ],
+        "prevention": [
+            "Rotate crops annually",
+            "Use resistant varieties",
+            "Proper plant spacing",
+            "Avoid overhead irrigation",
+            "Maintain plant health"
+        ],
+        "organic_treatment": [
+            "Neem oil spray",
+            "Compost tea application",
+            "Proper mulching",
+            "Beneficial microorganism inoculation"
+        ]
+    },
+    
+    "Potato___Late_blight": {
+        "disease_name": "Potato Late Blight",
+        "scientific_name": "Phytophthora infestans",
+        "crop": "Potato",
+        "severity": "Very High",
+        "description": "A devastating disease that can destroy entire potato crops quickly in favorable conditions.",
         "symptoms": [
             "Dark, water-soaked spots on leaves",
             "White mold growth on leaf undersides",
-            "Brown, greasy spots on fruit",
+            "Brown, firm rot on tubers",
             "Rapid plant collapse",
             "Foul odor from infected tissues"
         ],
@@ -351,6 +827,252 @@ DISEASE_INFO = {
             "Baking soda solution",
             "Proper plant spacing",
             "Mulching to prevent soil splash"
+        ]
+    },
+    
+    "Potato___healthy": {
+        "disease_name": "Healthy Potato",
+        "scientific_name": "N/A",
+        "crop": "Potato",
+        "severity": "None",
+        "description": "Your potato plant appears healthy with no visible disease symptoms!",
+        "symptoms": [
+            "Green, healthy foliage",
+            "No disease symptoms visible",
+            "Normal growth and tuber development",
+            "Good plant vigor"
+        ],
+        "causes": ["Plant is healthy"],
+        "treatment": ["Continue current care routine"],
+        "prevention": [
+            "Maintain consistent watering",
+            "Ensure proper hilling",
+            "Monitor regularly for pests and diseases",
+            "Ensure proper nutrition",
+            "Practice crop rotation"
+        ],
+        "organic_treatment": [
+            "Continue organic practices",
+            "Maintain soil health",
+            "Use beneficial microorganisms",
+            "Regular monitoring"
+        ]
+    },
+    
+    # RASPBERRY DISEASES
+    "Raspberry___healthy": {
+        "disease_name": "Healthy Raspberry",
+        "scientific_name": "N/A",
+        "crop": "Raspberry",
+        "severity": "None",
+        "description": "Your raspberry plant appears healthy with no visible disease symptoms!",
+        "symptoms": [
+            "Green, healthy canes and leaves",
+            "No disease symptoms visible",
+            "Normal growth and fruit development",
+            "Good plant vigor"
+        ],
+        "causes": ["Plant is healthy"],
+        "treatment": ["Continue current care routine"],
+        "prevention": [
+            "Maintain proper pruning",
+            "Ensure good air circulation",
+            "Monitor regularly for pests and diseases",
+            "Ensure proper nutrition",
+            "Remove old canes annually"
+        ],
+        "organic_treatment": [
+            "Continue organic practices",
+            "Maintain soil health",
+            "Use beneficial insects",
+            "Regular monitoring"
+        ]
+    },
+    
+    # SOYBEAN DISEASES
+    "Soybean___healthy": {
+        "disease_name": "Healthy Soybean",
+        "scientific_name": "N/A",
+        "crop": "Soybean",
+        "severity": "None",
+        "description": "Your soybean plant appears healthy with no visible disease symptoms!",
+        "symptoms": [
+            "Green, healthy foliage",
+            "No disease symptoms visible",
+            "Normal growth and pod development",
+            "Good plant vigor"
+        ],
+        "causes": ["Plant is healthy"],
+        "treatment": ["Continue current management practices"],
+        "prevention": [
+            "Maintain proper fertilization",
+            "Ensure adequate water supply",
+            "Monitor for pests and diseases",
+            "Practice crop rotation",
+            "Use quality seeds"
+        ],
+        "organic_treatment": [
+            "Continue organic practices",
+            "Maintain soil health",
+            "Integrated pest management",
+            "Regular monitoring"
+        ]
+    },
+    
+    # SQUASH DISEASES
+    "Squash___Powdery_mildew": {
+        "disease_name": "Squash Powdery Mildew",
+        "scientific_name": "Podosphaera xanthii",
+        "crop": "Squash",
+        "severity": "Moderate",
+        "description": "A fungal disease causing white powdery growth on squash leaves and stems.",
+        "symptoms": [
+            "White powdery coating on leaves",
+            "Yellowing and browning of leaves",
+            "Stunted plant growth",
+            "Reduced fruit quality",
+            "Premature leaf drop"
+        ],
+        "causes": [
+            "Podosphaera xanthii fungus",
+            "High humidity with dry conditions",
+            "Poor air circulation",
+            "Overcrowded plantings"
+        ],
+        "treatment": [
+            "Apply sulfur-based fungicides",
+            "Use systemic fungicides",
+            "Improve air circulation",
+            "Remove infected plant material",
+            "Apply horticultural oils"
+        ],
+        "prevention": [
+            "Plant resistant varieties",
+            "Ensure proper spacing",
+            "Improve air circulation",
+            "Avoid overhead watering",
+            "Regular monitoring"
+        ],
+        "organic_treatment": [
+            "Sulfur dust or spray",
+            "Baking soda solution",
+            "Neem oil application",
+            "Proper plant spacing"
+        ]
+    },
+    
+    # STRAWBERRY DISEASES
+    "Strawberry___Leaf_scorch": {
+        "disease_name": "Strawberry Leaf Scorch",
+        "scientific_name": "Diplocarpon earlianum",
+        "crop": "Strawberry",
+        "severity": "Moderate",
+        "description": "A fungal disease causing leaf spots and scorching on strawberry plants.",
+        "symptoms": [
+            "Small, dark purple spots on leaves",
+            "Spots develop gray centers",
+            "Leaves appear scorched or burned",
+            "Premature leaf drop",
+            "Reduced plant vigor"
+        ],
+        "causes": [
+            "Diplocarpon earlianum fungus",
+            "Warm, humid weather",
+            "Poor air circulation",
+            "Overhead watering",
+            "Infected plant debris"
+        ],
+        "treatment": [
+            "Apply fungicides containing captan",
+            "Remove infected leaves",
+            "Improve air circulation",
+            "Use drip irrigation",
+            "Apply preventive sprays"
+        ],
+        "prevention": [
+            "Plant resistant varieties",
+            "Ensure proper spacing",
+            "Avoid overhead watering",
+            "Remove plant debris",
+            "Regular monitoring"
+        ],
+        "organic_treatment": [
+            "Copper-based fungicides",
+            "Proper sanitation",
+            "Cultural control methods",
+            "Beneficial microorganisms"
+        ]
+    },
+    
+    "Strawberry___healthy": {
+        "disease_name": "Healthy Strawberry",
+        "scientific_name": "N/A",
+        "crop": "Strawberry",
+        "severity": "None",
+        "description": "Your strawberry plant appears healthy with no visible disease symptoms!",
+        "symptoms": [
+            "Green, healthy foliage",
+            "No disease symptoms visible",
+            "Normal growth and fruit development",
+            "Good plant vigor"
+        ],
+        "causes": ["Plant is healthy"],
+        "treatment": ["Continue current care routine"],
+        "prevention": [
+            "Maintain proper watering",
+            "Ensure good drainage",
+            "Monitor regularly for pests and diseases",
+            "Ensure proper nutrition",
+            "Remove old leaves regularly"
+        ],
+        "organic_treatment": [
+            "Continue organic practices",
+            "Maintain soil health",
+            "Use beneficial insects",
+            "Regular monitoring"
+        ]
+    },
+    
+    # TOMATO DISEASES - COMPLETE SET
+    "Tomato___Bacterial_spot": {
+        "disease_name": "Tomato Bacterial Spot",
+        "scientific_name": "Xanthomonas vesicatoria",
+        "crop": "Tomato",
+        "severity": "High",
+        "description": "A bacterial disease causing spots on leaves, stems, and fruit of tomato plants.",
+        "symptoms": [
+            "Small, dark brown spots on leaves",
+            "Spots have yellow halos",
+            "Fruit develops raised, scabby spots",
+            "Premature leaf drop",
+            "Reduced fruit quality"
+        ],
+        "causes": [
+            "Xanthomonas bacterial infection",
+            "Warm, humid weather",
+            "Overhead watering",
+            "Contaminated seeds or transplants",
+            "Wounds from insects or tools"
+        ],
+        "treatment": [
+            "Apply copper-based bactericides",
+            "Remove infected plant material",
+            "Improve air circulation",
+            "Use drip irrigation",
+            "Apply preventive sprays"
+        ],
+        "prevention": [
+            "Use certified disease-free seeds",
+            "Avoid overhead watering",
+            "Rotate crops annually",
+            "Disinfect tools between plants",
+            "Plant resistant varieties"
+        ],
+        "organic_treatment": [
+            "Copper sulfate applications",
+            "Proper sanitation practices",
+            "Beneficial bacteria applications",
+            "Cultural control methods"
         ]
     },
     
@@ -396,6 +1118,300 @@ DISEASE_INFO = {
         ]
     },
     
+    "Tomato___Late_blight": {
+        "disease_name": "Tomato Late Blight",
+        "scientific_name": "Phytophthora infestans",
+        "crop": "Tomato",
+        "severity": "Very High",
+        "description": "A devastating disease that can destroy entire tomato crops quickly in favorable conditions.",
+        "symptoms": [
+            "Dark, water-soaked spots on leaves",
+            "White mold growth on leaf undersides",
+            "Brown, greasy spots on fruit",
+            "Rapid plant collapse",
+            "Foul odor from infected tissues"
+        ],
+        "causes": [
+            "Phytophthora infestans pathogen",
+            "Cool, wet weather conditions",
+            "High humidity",
+            "Poor air circulation",
+            "Infected plant material"
+        ],
+        "treatment": [
+            "Apply copper-based fungicides immediately",
+            "Remove infected plants completely",
+            "Improve air circulation",
+            "Avoid overhead watering",
+            "Apply systemic fungicides"
+        ],
+        "prevention": [
+            "Use resistant varieties",
+            "Ensure good air circulation",
+            "Water at soil level only",
+            "Apply preventive fungicides",
+            "Remove plant debris"
+        ],
+        "organic_treatment": [
+            "Copper sulfate spray",
+            "Baking soda solution",
+            "Proper plant spacing",
+            "Mulching to prevent soil splash"
+        ]
+    },
+    
+    "Tomato___Leaf_Mold": {
+        "disease_name": "Tomato Leaf Mold",
+        "scientific_name": "Passalora fulva",
+        "crop": "Tomato",
+        "severity": "Moderate",
+        "description": "A fungal disease that primarily affects greenhouse tomatoes, causing yellowing and moldy growth on leaves.",
+        "symptoms": [
+            "Yellow spots on upper leaf surface",
+            "Olive-green to brown mold on leaf undersides",
+            "Leaves turn brown and wither",
+            "Reduced photosynthesis",
+            "Premature defoliation"
+        ],
+        "causes": [
+            "Passalora fulva fungal infection",
+            "High humidity (above 85%)",
+            "Poor air circulation",
+            "Temperature between 72-75°F",
+            "Greenhouse conditions"
+        ],
+        "treatment": [
+            "Improve ventilation and air circulation",
+            "Reduce humidity levels below 85%",
+            "Apply copper-based fungicides",
+            "Remove infected leaves immediately",
+            "Use resistant tomato varieties"
+        ],
+        "prevention": [
+            "Maintain good air circulation",
+            "Control greenhouse humidity",
+            "Space plants properly",
+            "Use drip irrigation instead of overhead watering",
+            "Regular monitoring for early detection"
+        ],
+        "organic_treatment": [
+            "Improve air circulation naturally",
+            "Use biological fungicides",
+            "Apply compost tea foliar spray",
+            "Remove affected plant material"
+        ]
+    },
+    
+    "Tomato___Septoria_leaf_spot": {
+        "disease_name": "Tomato Septoria Leaf Spot",
+        "scientific_name": "Septoria lycopersici",
+        "crop": "Tomato",
+        "severity": "Moderate",
+        "description": "A fungal disease causing distinctive spotted lesions on tomato leaves.",
+        "symptoms": [
+            "Small, circular spots with gray centers",
+            "Dark brown borders around spots",
+            "Black specks (pycnidia) in spot centers",
+            "Lower leaves affected first",
+            "Progressive upward spread"
+        ],
+        "causes": [
+            "Septoria lycopersici fungus",
+            "Warm, wet weather",
+            "High humidity",
+            "Poor air circulation",
+            "Infected plant debris"
+        ],
+        "treatment": [
+            "Apply fungicides containing chlorothalonil",
+            "Remove lower infected leaves",
+            "Improve air circulation",
+            "Mulch around plants",
+            "Water at soil level only"
+        ],
+        "prevention": [
+            "Use resistant varieties",
+            "Proper plant spacing",
+            "Avoid overhead irrigation",
+            "Remove plant debris",
+            "Crop rotation"
+        ],
+        "organic_treatment": [
+            "Neem oil applications",
+            "Baking soda spray",
+            "Proper mulching",
+            "Cultural practices"
+        ]
+    },
+    
+    "Tomato___Spider_mites Two-spotted_spider_mite": {
+        "disease_name": "Tomato Spider Mites (Two-spotted)",
+        "scientific_name": "Tetranychus urticae",
+        "crop": "Tomato",
+        "severity": "Moderate",
+        "description": "Tiny spider mites that feed on tomato leaves, causing stippling and webbing.",
+        "symptoms": [
+            "Fine stippling on leaf surface",
+            "Yellow or bronze discoloration",
+            "Fine webbing on leaves",
+            "Premature leaf drop",
+            "Reduced plant vigor"
+        ],
+        "causes": [
+            "Two-spotted spider mite infestation",
+            "Hot, dry conditions",
+            "Dusty environments",
+            "Overuse of broad-spectrum pesticides",
+            "Stressed plants"
+        ],
+        "treatment": [
+            "Apply miticides or insecticidal soap",
+            "Increase humidity around plants",
+            "Use predatory mites",
+            "Remove heavily infested leaves",
+            "Spray with water to dislodge mites"
+        ],
+        "prevention": [
+            "Maintain adequate soil moisture",
+            "Avoid dusty conditions",
+            "Use beneficial insects",
+            "Regular monitoring",
+            "Proper plant nutrition"
+        ],
+        "organic_treatment": [
+            "Neem oil spray",
+            "Insecticidal soap",
+            "Predatory mite release",
+            "Strong water spray"
+        ]
+    },
+    
+    "Tomato___Target_Spot": {
+        "disease_name": "Tomato Target Spot",
+        "scientific_name": "Corynespora cassiicola",
+        "crop": "Tomato",
+        "severity": "Moderate",
+        "description": "A fungal disease causing target-like spots on tomato leaves and fruit.",
+        "symptoms": [
+            "Brown spots with concentric rings",
+            "Target-like appearance",
+            "Spots on leaves, stems, and fruit",
+            "Premature defoliation",
+            "Reduced fruit quality"
+        ],
+        "causes": [
+            "Corynespora cassiicola fungus",
+            "Warm, humid conditions",
+            "Poor air circulation",
+            "Overhead watering",
+            "Plant stress"
+        ],
+        "treatment": [
+            "Apply fungicides with active ingredients like azoxystrobin",
+            "Remove infected plant material",
+            "Improve air circulation",
+            "Use drip irrigation",
+            "Maintain plant health"
+        ],
+        "prevention": [
+            "Use resistant varieties",
+            "Proper plant spacing",
+            "Avoid overhead watering",
+            "Crop rotation",
+            "Good sanitation practices"
+        ],
+        "organic_treatment": [
+            "Copper-based fungicides",
+            "Biological control agents",
+            "Cultural practices",
+            "Proper plant nutrition"
+        ]
+    },
+    
+    "Tomato___Tomato_Yellow_Leaf_Curl_Virus": {
+        "disease_name": "Tomato Yellow Leaf Curl Virus",
+        "scientific_name": "TYLCV",
+        "crop": "Tomato",
+        "severity": "Very High",
+        "description": "A viral disease transmitted by whiteflies, causing severe stunting and yield loss.",
+        "symptoms": [
+            "Upward curling of leaves",
+            "Yellow leaf margins",
+            "Stunted plant growth",
+            "Reduced fruit size and number",
+            "Interveinal yellowing"
+        ],
+        "causes": [
+            "Tomato Yellow Leaf Curl Virus",
+            "Whitefly transmission",
+            "Infected transplants",
+            "Nearby infected plants",
+            "Warm weather conditions"
+        ],
+        "treatment": [
+            "Remove infected plants immediately",
+            "Control whitefly populations",
+            "Use reflective mulches",
+            "Apply insecticides for whitefly control",
+            "No cure available - prevention is key"
+        ],
+        "prevention": [
+            "Use virus-resistant varieties",
+            "Control whitefly populations",
+            "Use physical barriers (screens)",
+            "Remove infected plants promptly",
+            "Monitor for early symptoms"
+        ],
+        "organic_treatment": [
+            "Beneficial insect release",
+            "Reflective mulches",
+            "Physical removal of infected plants",
+            "Whitefly traps"
+        ]
+    },
+    
+    "Tomato___Tomato_mosaic_virus": {
+        "disease_name": "Tomato Mosaic Virus",
+        "scientific_name": "ToMV",
+        "crop": "Tomato",
+        "severity": "High",
+        "description": "A viral disease causing mosaic patterns on leaves and reduced fruit quality.",
+        "symptoms": [
+            "Mosaic pattern on leaves",
+            "Light and dark green patches",
+            "Leaf distortion",
+            "Stunted growth",
+            "Reduced fruit quality"
+        ],
+        "causes": [
+            "Tomato Mosaic Virus",
+            "Mechanical transmission",
+            "Contaminated tools",
+            "Infected seeds",
+            "Human handling"
+        ],
+        "treatment": [
+            "Remove infected plants",
+            "Disinfect tools and hands",
+            "No chemical treatment available",
+            "Focus on prevention",
+            "Control aphid vectors"
+        ],
+        "prevention": [
+            "Use certified virus-free seeds",
+            "Disinfect tools regularly",
+            "Wash hands between plants",
+            "Control aphid populations",
+            "Remove infected plants promptly"
+        ],
+        "organic_treatment": [
+            "Sanitation practices",
+            "Physical removal",
+            "Tool disinfection",
+            "Beneficial insect management"
+        ]
+    },
+    
     "Tomato___healthy": {
         "disease_name": "Healthy Tomato",
         "scientific_name": "N/A",
@@ -422,46 +1438,6 @@ DISEASE_INFO = {
             "Regular soil amendments",
             "Companion planting",
             "Natural pest management"
-        ]
-    },
-    
-    # Corn diseases
-    "Corn_(maize)___Northern_Leaf_Blight": {
-        "disease_name": "Northern Corn Leaf Blight",
-        "scientific_name": "Exserohilum turcicum",
-        "crop": "Corn",
-        "severity": "High",
-        "description": "A fungal disease causing significant yield losses in corn crops.",
-        "symptoms": [
-            "Long, elliptical lesions on leaves",
-            "Gray-green to tan colored spots",
-            "Lesions may have dark borders",
-            "Premature leaf death",
-            "Reduced photosynthesis"
-        ],
-        "causes": [
-            "Exserohilum turcicum fungus",
-            "Warm, humid weather",
-            "Poor air circulation",
-            "Infected crop residue"
-        ],
-        "treatment": [
-            "Apply fungicides at first sign",
-            "Use resistant corn varieties",
-            "Improve field drainage",
-            "Remove infected plant debris"
-        ],
-        "prevention": [
-            "Crop rotation",
-            "Use resistant hybrids",
-            "Proper field sanitation",
-            "Balanced fertilization"
-        ],
-        "organic_treatment": [
-            "Biological control agents",
-            "Crop rotation with non-host plants",
-            "Organic fungicide applications",
-            "Soil health improvement"
         ]
     }
 }
