@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🌱 AI-Powered Plant Disease Detection
+# 🌱 Phytocognix - AI-Powered Plant Disease Detection
 
 ### *Empowering Farmers with Intelligent Crop Health Solutions*
 
@@ -19,7 +19,7 @@
 
 ## 🌟 Overview
 
-**AI-Powered Plant Disease Detection** is a cutting-edge machine learning solution that helps farmers and agricultural professionals identify plant diseases instantly through image analysis. Built with state-of-the-art deep learning techniques, this system achieves **96.5% accuracy** across 38 different plant disease classes.
+**Phytocognix** is a cutting-edge machine learning solution that helps farmers and agricultural professionals identify plant diseases instantly through image analysis. Built with state-of-the-art deep learning techniques, this system achieves **96.5% accuracy** across 38 different plant disease classes.
 
 ### 🎯 Problem Statement
 
