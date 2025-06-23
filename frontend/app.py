@@ -74,6 +74,7 @@ def load_css():
         border-radius: 8px;
         border: 1px solid #ffeaa7;
         margin: 1rem 0;
+        color: black !important;        
     }
     
     .healthy-info {
