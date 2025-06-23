@@ -9,7 +9,7 @@ from utils.ui_components import render_header, render_sidebar
 def render_home_page():
     """Render the home page."""
     st.set_page_config(
-        page_title="🌱 Plant Disease Detection - Home",
+        page_title="🌱 Phytocognix - Plant Disease Detection - Home",
         page_icon="🌱",
         layout="wide"
     )
@@ -18,7 +18,7 @@ def render_home_page():
     
     # Welcome section
     st.markdown("""
-    ## Welcome to AI-Powered Plant Disease Detection! 🌱
+    ## Welcome to Phytocognix - AI-Powered Plant Disease Detection! 🌱
     
     Our advanced machine learning system helps farmers and gardeners identify plant diseases quickly and accurately.
     Simply upload a photo of your plant leaf, and get instant diagnosis with treatment recommendations.
