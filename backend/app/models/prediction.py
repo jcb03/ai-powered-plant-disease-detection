@@ -12,7 +12,7 @@ import json
 import time
 
 from ..core.config import settings
-from ..utils.image_processing import preprocess_image
+from ..utils.image_processing import preprocess_image, preprocess_image_with_padding
 from ..utils.disease_info import get_disease_info
 
 logger = logging.getLogger(__name__)
@@ -41,8 +41,11 @@ class PlantDiseasePredictor:
             logger.info(f"Loading model from {model_path}")
             self.model = tf.keras.models.load_model(str(model_path))
             
-            # Load class names
+            # Load class names FIRST
             self._load_class_names()
+            
+            # CRITICAL: Test model immediately after loading
+            self._test_model_loading()
             
             # Get model information
             self._extract_model_info()
@@ -63,6 +66,9 @@ class PlantDiseasePredictor:
                 with open(class_names_file, 'r') as f:
                     self.class_names = json.load(f)
                 logger.info(f"Loaded {len(self.class_names)} class names from file")
+                
+                # DEBUG: Print first few class names
+                logger.info(f"First 5 classes: {self.class_names[:5]}")
                 return
             except Exception as e:
                 logger.warning(f"Error loading class names file: {str(e)}")
@@ -85,6 +91,41 @@ class PlantDiseasePredictor:
             'Tomato___healthy'
         ]
         logger.info(f"Using default class names: {len(self.class_names)} classes")
+    
+    def _test_model_loading(self):
+        """Test model immediately after loading to catch issues early."""
+        if self.model is None:
+            logger.error("Model is None!")
+            return
+        
+        try:
+            # Test with dummy input
+            dummy_input = np.random.random((1, 224, 224, 3)).astype(np.float32)
+            test_predictions = self.model.predict(dummy_input, verbose=0)
+            
+            logger.info(f"Model test successful!")
+            logger.info(f"Model input shape: {self.model.input_shape}")
+            logger.info(f"Model output shape: {self.model.output_shape}")
+            logger.info(f"Test prediction shape: {test_predictions.shape}")
+            logger.info(f"Number of classes in model: {test_predictions.shape[1]}")
+            logger.info(f"Number of class names loaded: {len(self.class_names)}")
+            
+            # CRITICAL CHECK: Verify class count matches
+            if test_predictions.shape[1] != len(self.class_names):
+                logger.error(f"MISMATCH: Model outputs {test_predictions.shape[1]} classes but we have {len(self.class_names)} class names!")
+                logger.error("This will cause 'Unknown Disease' predictions!")
+                
+                # Try to fix by truncating or padding class names
+                if test_predictions.shape[1] < len(self.class_names):
+                    logger.warning(f"Truncating class names from {len(self.class_names)} to {test_predictions.shape[1]}")
+                    self.class_names = self.class_names[:test_predictions.shape[1]]
+                else:
+                    logger.warning(f"Model has more classes than names. Adding placeholder names.")
+                    for i in range(len(self.class_names), test_predictions.shape[1]):
+                        self.class_names.append(f"Unknown_Class_{i}")
+            
+        except Exception as e:
+            logger.error(f"Model test failed: {str(e)}")
     
     def _extract_model_info(self):
         """Extract model information for API responses."""
@@ -109,19 +150,19 @@ class PlantDiseasePredictor:
         """Create a dummy model for testing when real model is not available."""
         logger.warning("Creating dummy model for testing purposes")
         
+        # Use default class names if not loaded
+        if not self.class_names:
+            self._load_class_names()
+        
         # Create a simple dummy model
         self.model = tf.keras.Sequential([
             tf.keras.layers.Input(shape=(224, 224, 3)),
             tf.keras.layers.GlobalAveragePooling2D(),
-            tf.keras.layers.Dense(len(self.class_names) if self.class_names else 38, activation='softmax')
+            tf.keras.layers.Dense(len(self.class_names), activation='softmax')
         ])
         
         self.model_loaded = False  # Mark as not properly loaded
-        
-        # Use default class names if not loaded
-        if not self.class_names:
-            self._load_class_names()
-    
+
     def predict(self, image_bytes: bytes) -> Dict:
         """
         Predict plant disease from image bytes.
@@ -137,32 +178,42 @@ class PlantDiseasePredictor:
         if self.model is None:
             return {
                 "error": "Model not loaded",
-                "prediction": None,
+                "prediction": "Unknown Disease",
                 "confidence": 0.0,
                 "disease_info": {},
                 "processing_time": 0.0
             }
         
         try:
-            # Preprocess image
-            processed_image = preprocess_image(image_bytes)
+            # CRITICAL: Use the correct preprocessing function
+            processed_image = preprocess_image(image_bytes, target_size=(224, 224))
+            
+            # DEBUG: Log preprocessing info
+            logger.debug(f"Processed image shape: {processed_image.shape}")
+            logger.debug(f"Processed image range: [{processed_image.min():.3f}, {processed_image.max():.3f}]")
             
             # Make prediction
             predictions = self.model.predict(processed_image, verbose=0)
             predicted_class_idx = np.argmax(predictions[0])
             confidence = float(predictions[0][predicted_class_idx])
             
-            # Get class name
+            # DEBUG: Log prediction info
+            logger.debug(f"Predicted class index: {predicted_class_idx}")
+            logger.debug(f"Confidence: {confidence:.3f}")
+            logger.debug(f"Available classes: {len(self.class_names)}")
+            
+            # Get class name with bounds checking
             if predicted_class_idx < len(self.class_names):
                 predicted_class = self.class_names[predicted_class_idx]
             else:
+                logger.error(f"Predicted class index {predicted_class_idx} is out of bounds for {len(self.class_names)} classes!")
                 predicted_class = f"Unknown_Class_{predicted_class_idx}"
             
             # Get disease information
             disease_info = get_disease_info(predicted_class)
             
-            # Get top predictions
-            top_indices = np.argsort(predictions[0])[-5:][::-1]  # Top 5
+            # Get top 5 predictions
+            top_indices = np.argsort(predictions[0])[-5:][::-1]
             top_predictions = []
             
             for idx in top_indices:
@@ -197,6 +248,13 @@ class PlantDiseasePredictor:
                     "model_loaded": self.model_loaded,
                     "num_classes": len(self.class_names),
                     "confidence_threshold": settings.confidence_threshold
+                },
+                # DEBUG INFO
+                "debug_info": {
+                    "predicted_index": int(predicted_class_idx),
+                    "total_classes": len(self.class_names),
+                    "preprocessing_shape": processed_image.shape,
+                    "prediction_shape": predictions.shape
                 }
             }
             
@@ -207,11 +265,111 @@ class PlantDiseasePredictor:
             return {
                 "success": False,
                 "error": f"Prediction failed: {str(e)}",
-                "prediction": None,
+                "prediction": "Unknown Disease",
                 "confidence": 0.0,
                 "disease_info": {},
                 "processing_time": time.time() - start_time
             }
+    
+    def test_preprocessing_methods(self, image_bytes: bytes) -> Dict:
+        """Test both preprocessing methods to see which works better."""
+        if self.model is None:
+            return {"error": "Model not loaded"}
+        
+        try:
+            # Method 1: Direct resize (should match training)
+            processed_direct = preprocess_image(image_bytes)
+            predictions_direct = self.model.predict(processed_direct, verbose=0)
+            
+            # Method 2: With padding (current method)
+            processed_padding = preprocess_image_with_padding(image_bytes)
+            predictions_padding = self.model.predict(processed_padding, verbose=0)
+            
+            # Compare results
+            direct_class_idx = np.argmax(predictions_direct[0])
+            padding_class_idx = np.argmax(predictions_padding[0])
+            
+            direct_conf = float(predictions_direct[0][direct_class_idx])
+            padding_conf = float(predictions_padding[0][padding_class_idx])
+            
+            direct_class = self.class_names[direct_class_idx] if direct_class_idx < len(self.class_names) else f"Unknown_{direct_class_idx}"
+            padding_class = self.class_names[padding_class_idx] if padding_class_idx < len(self.class_names) else f"Unknown_{padding_class_idx}"
+            
+            logger.info(f"Direct resize: {direct_class} ({direct_conf:.3f})")
+            logger.info(f"With padding: {padding_class} ({padding_conf:.3f})")
+            
+            return {
+                "direct_resize": {
+                    "class": direct_class,
+                    "confidence": direct_conf,
+                    "class_index": int(direct_class_idx)
+                },
+                "with_padding": {
+                    "class": padding_class,
+                    "confidence": padding_conf,
+                    "class_index": int(padding_class_idx)
+                },
+                "recommendation": "direct_resize" if direct_conf > padding_conf else "with_padding"
+            }
+            
+        except Exception as e:
+            logger.error(f"Preprocessing test failed: {str(e)}")
+            return {"error": str(e)}
+    
+    def debug_prediction(self, image_bytes: bytes) -> Dict:
+        """Debug prediction with detailed information."""
+        if self.model is None:
+            return {"error": "Model not loaded"}
+        
+        try:
+            # Test preprocessing
+            processed_image = preprocess_image(image_bytes)
+            
+            # Make prediction
+            predictions = self.model.predict(processed_image, verbose=0)
+            
+            # Get detailed info
+            predicted_class_idx = np.argmax(predictions[0])
+            confidence = float(predictions[0][predicted_class_idx])
+            
+            # Get top 10 predictions for debugging
+            top_indices = np.argsort(predictions[0])[-10:][::-1]
+            top_predictions = []
+            
+            for idx in top_indices:
+                if idx < len(self.class_names):
+                    class_name = self.class_names[idx]
+                    conf = float(predictions[0][idx])
+                    top_predictions.append({
+                        "index": int(idx),
+                        "class": class_name,
+                        "confidence": conf,
+                        "percentage": round(conf * 100, 2)
+                    })
+            
+            return {
+                "model_info": {
+                    "input_shape": self.model.input_shape,
+                    "output_shape": self.model.output_shape,
+                    "total_classes": len(self.class_names)
+                },
+                "preprocessing_info": {
+                    "processed_shape": processed_image.shape,
+                    "processed_range": [float(processed_image.min()), float(processed_image.max())],
+                    "processed_mean": float(processed_image.mean())
+                },
+                "prediction_info": {
+                    "prediction_shape": predictions.shape,
+                    "predicted_index": int(predicted_class_idx),
+                    "predicted_class": self.class_names[predicted_class_idx] if predicted_class_idx < len(self.class_names) else f"Unknown_{predicted_class_idx}",
+                    "confidence": confidence
+                },
+                "top_predictions": top_predictions
+            }
+            
+        except Exception as e:
+            logger.error(f"Debug prediction failed: {str(e)}")
+            return {"error": str(e)}
     
     def _get_confidence_level(self, confidence: float) -> str:
         """Get confidence level description."""
@@ -248,7 +406,7 @@ class PlantDiseasePredictor:
                     "batch_index": i,
                     "success": False,
                     "error": str(e),
-                    "prediction": None,
+                    "prediction": "Unknown Disease",
                     "confidence": 0.0
                 })
         
