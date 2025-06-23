@@ -91,6 +91,7 @@ def load_css():
         border-radius: 8px;
         margin: 1rem 0;
         border-left: 4px solid #007bff;
+        color: black !important;        
     }
     
     .warning-section {
