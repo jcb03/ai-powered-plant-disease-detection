@@ -183,3 +183,245 @@
 2025-06-23 03:42:14,800 - app.main - INFO - Model loaded: True
 2025-06-23 03:42:14,801 - app.main - INFO - Supported classes: 38
 2025-06-23 03:42:14,801 - app.main - INFO - Shutting down application
+2025-06-23 03:42:26,029 - app.main - INFO - Starting Plant Disease Detection API v1.0.0
+2025-06-23 03:42:26,029 - app.main - INFO - Debug mode: False
+2025-06-23 03:42:26,029 - app.main - INFO - Model loaded: True
+2025-06-23 03:42:26,029 - app.main - INFO - Supported classes: 38
+2025-06-23 03:42:34,563 - app.main - INFO - Request: GET http://localhost:8000/health
+2025-06-23 03:42:34,564 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 03:42:34,566 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 03:42:34,566 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 03:42:34,759 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 03:42:34,759 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 03:42:35,228 - app.main - INFO - Request: GET http://localhost:8000/health
+2025-06-23 03:42:35,230 - app.main - INFO - Response: 200 - 0.002s
+2025-06-23 03:42:35,232 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 03:42:35,233 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 03:42:35,285 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 03:42:35,286 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 03:44:45,358 - app.main - INFO - Request: GET http://localhost:8000/health
+2025-06-23 03:44:45,359 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 03:44:45,362 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 03:44:45,362 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 03:44:45,426 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 03:44:45,427 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 03:44:47,782 - app.main - INFO - Request: GET http://localhost:8000/health
+2025-06-23 03:44:47,782 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 03:44:47,784 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 03:44:47,785 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 03:44:47,860 - app.main - INFO - Request: POST http://localhost:8000/api/v1/predict
+2025-06-23 03:44:48,623 - app.main - INFO - Response: 200 - 0.764s
+2025-06-23 03:44:48,965 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 03:44:48,965 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 03:52:24,169 - app.main - INFO - Request: GET http://localhost:8000/health
+2025-06-23 03:52:24,170 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 03:52:24,172 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 03:52:24,173 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 03:52:24,230 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 03:52:24,230 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 03:52:41,385 - app.main - INFO - Request: GET http://localhost:8000/health
+2025-06-23 03:52:41,386 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 03:52:41,388 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 03:52:41,389 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 03:52:41,445 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 03:52:41,445 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 03:52:42,371 - app.main - INFO - Request: GET http://localhost:8000/health
+2025-06-23 03:52:42,371 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 03:52:42,373 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 03:52:42,375 - app.main - INFO - Response: 200 - 0.002s
+2025-06-23 03:52:42,434 - app.main - INFO - Request: POST http://localhost:8000/api/v1/predict
+2025-06-23 03:52:42,501 - app.main - INFO - Response: 200 - 0.067s
+2025-06-23 03:52:42,508 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 03:52:42,508 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 03:54:21,162 - app.main - INFO - Request: GET http://localhost:8000/health
+2025-06-23 03:54:21,163 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 03:54:21,166 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 03:54:21,166 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 03:54:21,217 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 03:54:21,217 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 03:55:24,174 - app.main - INFO - Request: GET http://localhost:8000/health
+2025-06-23 03:55:24,175 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 03:55:24,178 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 03:55:24,179 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 03:55:24,232 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 03:55:24,233 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 03:55:27,393 - app.main - INFO - Request: GET http://localhost:8000/health
+2025-06-23 03:55:27,394 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 03:55:27,396 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 03:55:27,396 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 03:55:27,446 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 03:55:27,447 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 04:07:00,761 - app.main - INFO - Request: GET http://localhost:8000/health
+2025-06-23 04:07:00,762 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 04:07:00,763 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 04:07:00,764 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 04:07:00,806 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 04:07:00,806 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 04:07:01,823 - app.main - INFO - Request: GET http://localhost:8000/health
+2025-06-23 04:07:01,823 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 04:07:01,825 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 04:07:01,825 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 04:07:01,867 - app.main - INFO - Request: POST http://localhost:8000/api/v1/predict
+2025-06-23 04:07:01,924 - app.main - INFO - Response: 200 - 0.057s
+2025-06-23 04:07:01,931 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 04:07:01,932 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 04:07:38,710 - app.main - INFO - Request: GET http://localhost:8000/health
+2025-06-23 04:07:38,711 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 04:07:38,713 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 04:07:38,713 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 04:07:38,753 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 04:07:38,753 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 04:08:48,315 - app.main - INFO - Request: GET http://localhost:8000/health
+2025-06-23 04:08:48,315 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 04:08:48,317 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 04:08:48,318 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 04:08:48,369 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 04:08:48,370 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 04:08:50,174 - app.main - INFO - Request: GET http://localhost:8000/health
+2025-06-23 04:08:50,175 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 04:08:50,177 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 04:08:50,177 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 04:08:50,225 - app.main - INFO - Request: POST http://localhost:8000/api/v1/predict
+2025-06-23 04:08:50,286 - app.main - INFO - Response: 200 - 0.061s
+2025-06-23 04:08:50,294 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 04:08:50,294 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 04:10:11,083 - app.main - INFO - Request: GET http://localhost:8000/health
+2025-06-23 04:10:11,084 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 04:10:11,086 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 04:10:11,086 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 04:10:11,128 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 04:10:11,129 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 04:10:19,131 - app.main - INFO - Request: GET http://localhost:8000/health
+2025-06-23 04:10:19,132 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 04:10:19,134 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 04:10:19,134 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 04:10:19,179 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 04:10:19,179 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 04:10:20,262 - app.main - INFO - Request: GET http://localhost:8000/health
+2025-06-23 04:10:20,263 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 04:10:20,264 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 04:10:20,265 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 04:10:20,307 - app.main - INFO - Request: POST http://localhost:8000/api/v1/predict
+2025-06-23 04:10:20,366 - app.main - INFO - Response: 200 - 0.059s
+2025-06-23 04:10:20,373 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 04:10:20,373 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 04:11:19,606 - app.main - INFO - Request: GET http://localhost:8000/health
+2025-06-23 04:11:19,607 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 04:11:19,609 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 04:11:19,609 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 04:11:19,654 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 04:11:19,654 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 04:11:24,378 - app.main - INFO - Request: GET http://localhost:8000/health
+2025-06-23 04:11:24,378 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 04:11:24,379 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 04:11:24,380 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 04:11:24,425 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 04:11:24,426 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 04:11:26,119 - app.main - INFO - Request: GET http://localhost:8000/health
+2025-06-23 04:11:26,119 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 04:11:26,120 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 04:11:26,121 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 04:11:26,165 - app.main - INFO - Request: POST http://localhost:8000/api/v1/predict
+2025-06-23 04:11:26,226 - app.main - INFO - Response: 200 - 0.061s
+2025-06-23 04:11:26,232 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 04:11:26,233 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 04:12:58,721 - app.main - INFO - Request: GET http://localhost:8000/health
+2025-06-23 04:12:58,722 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 04:12:58,724 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 04:12:58,724 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 04:12:58,765 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 04:12:58,766 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 04:13:02,524 - app.main - INFO - Request: GET http://localhost:8000/health
+2025-06-23 04:13:02,524 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 04:13:02,526 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 04:13:02,526 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 04:13:02,581 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 04:13:02,582 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 04:13:06,216 - app.main - INFO - Request: GET http://localhost:8000/health
+2025-06-23 04:13:06,216 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 04:13:06,218 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 04:13:06,218 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 04:13:06,271 - app.main - INFO - Request: POST http://localhost:8000/api/v1/predict
+2025-06-23 04:13:06,336 - app.main - INFO - Response: 200 - 0.066s
+2025-06-23 04:13:06,341 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 04:13:06,342 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 04:13:22,567 - app.main - INFO - Request: GET http://localhost:8000/health
+2025-06-23 04:13:22,568 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 04:13:22,569 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 04:13:22,570 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 04:13:22,613 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 04:13:22,614 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 04:13:50,835 - app.main - INFO - Request: GET http://localhost:8000/health
+2025-06-23 04:13:50,835 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 04:13:50,837 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 04:13:50,837 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 04:13:50,885 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 04:13:50,885 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 04:13:51,642 - app.main - INFO - Request: GET http://localhost:8000/health
+2025-06-23 04:13:51,642 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 04:13:51,644 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 04:13:51,644 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 04:13:51,687 - app.main - INFO - Request: POST http://localhost:8000/api/v1/predict
+2025-06-23 04:13:51,745 - app.main - INFO - Response: 200 - 0.058s
+2025-06-23 04:13:51,751 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 04:13:51,751 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 04:14:01,267 - app.main - INFO - Request: GET http://localhost:8000/health
+2025-06-23 04:14:01,268 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 04:14:01,269 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 04:14:01,270 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 04:14:01,310 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 04:14:01,311 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 04:14:06,304 - app.main - INFO - Request: GET http://localhost:8000/health
+2025-06-23 04:14:06,305 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 04:14:06,306 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 04:14:06,307 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 04:14:06,354 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 04:14:06,354 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 04:14:07,385 - app.main - INFO - Request: GET http://localhost:8000/health
+2025-06-23 04:14:07,386 - app.main - INFO - Response: 200 - 0.002s
+2025-06-23 04:14:07,389 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 04:14:07,389 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 04:14:07,429 - app.main - INFO - Request: POST http://localhost:8000/api/v1/predict
+2025-06-23 04:14:07,481 - app.main - INFO - Response: 200 - 0.053s
+2025-06-23 04:14:07,487 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 04:14:07,487 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 04:14:23,697 - app.main - INFO - Request: GET http://localhost:8000/health
+2025-06-23 04:14:23,698 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 04:14:23,700 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 04:14:23,700 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 04:14:23,743 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 04:14:23,743 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 04:14:31,125 - app.main - INFO - Request: GET http://localhost:8000/health
+2025-06-23 04:14:31,126 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 04:14:31,128 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 04:14:31,128 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 04:14:31,168 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 04:14:31,169 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 04:14:33,827 - app.main - INFO - Request: GET http://localhost:8000/health
+2025-06-23 04:14:33,828 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 04:14:33,829 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 04:14:33,830 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 04:14:33,870 - app.main - INFO - Request: POST http://localhost:8000/api/v1/predict
+2025-06-23 04:14:33,924 - app.main - INFO - Response: 200 - 0.054s
+2025-06-23 04:14:33,929 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 04:14:33,929 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 04:14:44,410 - app.main - INFO - Request: GET http://localhost:8000/health
+2025-06-23 04:14:44,411 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 04:14:44,413 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 04:14:44,413 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 04:14:44,455 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 04:14:44,455 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 04:14:52,983 - app.main - INFO - Request: GET http://localhost:8000/health
+2025-06-23 04:14:52,984 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 04:14:52,986 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 04:14:52,986 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 04:14:53,030 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 04:14:53,031 - app.main - INFO - Response: 200 - 0.001s
+2025-06-23 04:14:53,976 - app.main - INFO - Request: GET http://localhost:8000/health
+2025-06-23 04:14:53,976 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 04:14:53,979 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-23 04:14:53,979 - app.main - INFO - Response: 200 - 0.000s
+2025-06-23 04:14:54,022 - app.main - INFO - Request: POST http://localhost:8000/api/v1/predict
+2025-06-23 04:14:54,083 - app.main - INFO - Response: 200 - 0.060s
+2025-06-23 04:14:54,089 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-23 04:14:54,090 - app.main - INFO - Response: 200 - 0.001s
