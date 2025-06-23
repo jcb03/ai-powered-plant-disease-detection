@@ -1164,3 +1164,18 @@
 2025-06-24 01:28:15,232 - app.main - INFO - Supported classes: 38
 2025-06-24 01:28:15,232 - app.main - INFO - API docs available at: /docs
 2025-06-24 01:28:15,233 - app.main - INFO - API endpoints available at: /api/v1/
+2025-06-24 02:39:06,855 - app.main - INFO - Shutting down application
+2025-06-24 02:39:10,312 - app.main - INFO - Starting Phytocognix API v1.0.0
+2025-06-24 02:39:10,312 - app.main - INFO - Debug mode: True (forced for development)
+2025-06-24 02:39:10,312 - app.main - INFO - Model loaded: True
+2025-06-24 02:39:10,313 - app.main - INFO - Supported classes: 38
+2025-06-24 02:39:10,313 - app.main - INFO - API docs available at: /docs
+2025-06-24 02:39:10,313 - app.main - INFO - API endpoints available at: /api/v1/
+2025-06-24 02:39:10,313 - app.main - INFO - Shutting down application
+2025-06-24 02:39:13,604 - app.main - INFO - Starting Phytocognix API v1.0.0
+2025-06-24 02:39:13,604 - app.main - INFO - Debug mode: True (forced for development)
+2025-06-24 02:39:13,606 - app.main - INFO - Model loaded: True
+2025-06-24 02:39:13,606 - app.main - INFO - Supported classes: 38
+2025-06-24 02:39:13,606 - app.main - INFO - API docs available at: /docs
+2025-06-24 02:39:13,606 - app.main - INFO - API endpoints available at: /api/v1/
+2025-06-24 02:39:49,193 - app.main - INFO - Shutting down application
