@@ -778,10 +778,10 @@ def display_prediction_results(result, confidence_threshold):
         confidence_color = "#4CAF50" if is_confident else "#ff9800"
         st.markdown(f"""
         <div class="disease-info">
-            <h3>🔍 Disease Detected</h3>
-            <h4>{disease_info.get('disease_name', prediction)}</h4>
-            <p><strong>Confidence:</strong> <span style="color: {confidence_color};">{confidence:.1%}</span></p>
-            {f"<p><em>⚠️ Low confidence - consider retaking the photo</em></p>" if not is_confident else ""}
+            <h3 style="color: black !important;">🔍 Disease Detected</h3>
+            <h4 style="color: black !important;">{disease_info.get('disease_name', prediction)}</h4>
+            <p style="color: black !important;"><strong>Confidence:</strong> <span style="color: {confidence_color};">{confidence:.1%}</span></p>
+            {f"<p style='color: black !important;'><em>⚠️ Low confidence - consider retaking the photo</em></p>" if not is_confident else ""}
         </div>
         """, unsafe_allow_html=True)
     
