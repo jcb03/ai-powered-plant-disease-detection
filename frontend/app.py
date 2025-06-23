@@ -73,8 +73,7 @@ def load_css():
         padding: 1rem;
         border-radius: 8px;
         border: 1px solid #ffeaa7;
-        margin: 1rem 0;
-        color: black !important;        
+        margin: 1rem 0;        
     }
     
     .healthy-info {
@@ -90,8 +89,7 @@ def load_css():
         padding: 1rem;
         border-radius: 8px;
         margin: 1rem 0;
-        border-left: 4px solid #007bff;
-        color: black !important;        
+        border-left: 4px solid #007bff;       
     }
     
     .warning-section {
