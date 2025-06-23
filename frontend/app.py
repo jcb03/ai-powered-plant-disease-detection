@@ -82,9 +82,14 @@ def load_css():
         padding: 1rem;
         border-radius: 8px;
         border: 1px solid #c3e6cb;
-        margin: 1rem 0;       
+        margin: 1rem 0;
+        color: black !important;               
     }
     
+    .healthy-info h3, .healthy-info h4, .healthy-info p {
+        color: black !important;
+    }            
+
     .treatment-section {
         background: #e7f3ff;
         padding: 1rem;
@@ -182,7 +187,7 @@ def add_custom_footer():
     }
     
     .footer-link {
-        color: black;
+        color: black !important;
         text-decoration: none;
         padding: 8px 15px;
         border-radius: 20px;
