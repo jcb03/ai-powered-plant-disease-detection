@@ -49,11 +49,11 @@ app.add_middleware(
 )
 
 # Add trusted host middleware for security (only in production)
-if not settings.debug and hasattr(settings, 'debug') and not settings.debug:
-    app.add_middleware(
-        TrustedHostMiddleware,
-        allowed_hosts=["localhost", "127.0.0.1", "*.herokuapp.com", "*.render.com"]
-    )
+#if not settings.debug and hasattr(settings, 'debug') and not settings.debug:
+#    app.add_middleware(
+#        TrustedHostMiddleware,
+#        allowed_hosts=["localhost", "127.0.0.1", "*.herokuapp.com", "*.render.com"]
+#    )
 
 # Request logging middleware
 @app.middleware("http")
