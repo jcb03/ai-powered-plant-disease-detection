@@ -4,7 +4,9 @@ Disease information database and utilities.
 
 from typing import Dict, List, Optional
 
+# Complete disease information database
 DISEASE_INFO = {
+    # Apple diseases
     "Apple___Apple_scab": {
         "disease_name": "Apple Scab",
         "scientific_name": "Venturia inaequalis",
@@ -156,6 +158,159 @@ DISEASE_INFO = {
         ]
     },
     
+    # GRAPE DISEASES - MISSING SECTION ADDED
+    "Grape___Black_rot": {
+        "disease_name": "Grape Black Rot",
+        "scientific_name": "Guignardia bidwellii",
+        "crop": "Grape",
+        "severity": "High",
+        "description": "A serious fungal disease that affects grape clusters and leaves, causing black, mummified berries.",
+        "symptoms": [
+            "Small, circular brown spots on leaves with light centers",
+            "Black, shriveled berries (mummies)",
+            "Reddish-brown lesions on shoots and tendrils",
+            "Premature leaf drop",
+            "Reduced grape quality and yield"
+        ],
+        "causes": [
+            "Fungal infection by Guignardia bidwellii",
+            "Warm, humid weather conditions",
+            "Poor air circulation in vineyard",
+            "Infected plant debris from previous season"
+        ],
+        "treatment": [
+            "Remove and destroy infected plant material immediately",
+            "Apply copper-based fungicides during growing season",
+            "Use systemic fungicides like myclobutanil or tebuconazole",
+            "Improve air circulation around vines",
+            "Prune infected shoots and clusters"
+        ],
+        "prevention": [
+            "Plant resistant grape varieties when possible",
+            "Ensure excellent air circulation in vineyard",
+            "Avoid overhead watering systems",
+            "Regular pruning for proper vine structure",
+            "Clean up and destroy fallen leaves and mummified berries"
+        ],
+        "organic_treatment": [
+            "Bordeaux mixture (copper sulfate + lime)",
+            "Sulfur-based fungicides",
+            "Proper sanitation and cultural practices",
+            "Beneficial microorganism applications"
+        ]
+    },
+    
+    "Grape___Esca_(Black_Measles)": {
+        "disease_name": "Grape Esca (Black Measles)",
+        "scientific_name": "Phaeomoniella chlamydospora",
+        "crop": "Grape",
+        "severity": "Very High",
+        "description": "A complex trunk disease affecting mature grapevines, often leading to vine death.",
+        "symptoms": [
+            "Tiger-stripe yellowing pattern on leaves",
+            "Black spots on grape berries",
+            "Sudden wilting of shoots (apoplexy)",
+            "Wood discoloration in trunk",
+            "Dieback of cordons and arms"
+        ],
+        "causes": [
+            "Complex of fungal pathogens",
+            "Pruning wounds as entry points",
+            "Stress conditions",
+            "Age of vines (more common in older vines)"
+        ],
+        "treatment": [
+            "Remove infected wood immediately",
+            "Apply wound protectants after pruning",
+            "Trunk injection treatments (consult specialist)",
+            "Improve vine nutrition and water management",
+            "Consider vine replacement in severe cases"
+        ],
+        "prevention": [
+            "Use proper pruning techniques and timing",
+            "Apply wound protectants immediately after pruning",
+            "Maintain vine health and reduce stress",
+            "Use clean, sterilized pruning tools",
+            "Plant certified disease-free vines"
+        ],
+        "organic_treatment": [
+            "Proper pruning and sanitation",
+            "Wound protection with natural compounds",
+            "Stress reduction through proper care",
+            "Biological control agents (research ongoing)"
+        ]
+    },
+    
+    "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)": {
+        "disease_name": "Grape Leaf Blight (Isariopsis Leaf Spot)",
+        "scientific_name": "Isariopsis clavispora",
+        "crop": "Grape",
+        "severity": "Moderate",
+        "description": "A fungal disease causing leaf spots and premature defoliation in grapevines.",
+        "symptoms": [
+            "Small, dark brown to black spots on leaves",
+            "Yellow halos around leaf spots",
+            "Premature yellowing and dropping of leaves",
+            "Reduced photosynthetic capacity",
+            "Weakened vine vigor"
+        ],
+        "causes": [
+            "Isariopsis clavispora fungal infection",
+            "High humidity and moisture",
+            "Poor air circulation",
+            "Overhead irrigation"
+        ],
+        "treatment": [
+            "Apply copper-based fungicides",
+            "Remove and destroy infected leaves",
+            "Improve air circulation through pruning",
+            "Use preventive fungicide sprays",
+            "Adjust irrigation to avoid leaf wetness"
+        ],
+        "prevention": [
+            "Avoid overhead irrigation systems",
+            "Ensure proper vine spacing for air circulation",
+            "Regular monitoring for early detection",
+            "Timely fungicide applications during susceptible periods",
+            "Maintain good vineyard sanitation"
+        ],
+        "organic_treatment": [
+            "Copper sulfate applications",
+            "Sulfur-based fungicides",
+            "Cultural control methods",
+            "Proper vine training and pruning"
+        ]
+    },
+    
+    "Grape___healthy": {
+        "disease_name": "Healthy Grape",
+        "scientific_name": "N/A",
+        "crop": "Grape",
+        "severity": "None",
+        "description": "Your grape vine appears healthy with vibrant foliage and no disease symptoms!",
+        "symptoms": [
+            "Green, healthy leaves",
+            "No visible disease symptoms",
+            "Normal growth and berry development",
+            "Good vine vigor"
+        ],
+        "causes": ["Plant is healthy"],
+        "treatment": ["Continue current vineyard management practices"],
+        "prevention": [
+            "Maintain proper pruning schedule",
+            "Ensure adequate nutrition",
+            "Monitor regularly for pests and diseases",
+            "Maintain good air circulation",
+            "Practice proper irrigation management"
+        ],
+        "organic_treatment": [
+            "Continue organic viticulture practices",
+            "Regular soil health monitoring",
+            "Integrated pest management",
+            "Natural disease prevention methods"
+        ]
+    },
+
     # Tomato diseases
     "Tomato___Late_blight": {
         "disease_name": "Tomato Late Blight",
@@ -270,7 +425,7 @@ DISEASE_INFO = {
         ]
     },
     
-    # Additional crops can be added here
+    # Corn diseases
     "Corn_(maize)___Northern_Leaf_Blight": {
         "disease_name": "Northern Corn Leaf Blight",
         "scientific_name": "Exserohilum turcicum",

@@ -29,14 +29,14 @@ logging.basicConfig(
 
 logger = logging.getLogger(__name__)
 
-# Create FastAPI app
+# Create FastAPI app - FORCE docs to be enabled
 app = FastAPI(
     title=settings.app_name,
     version=settings.app_version,
     description="AI-powered plant disease detection system for farmers and gardeners",
-    debug=settings.debug,
-    docs_url="/docs" if settings.debug else None,
-    redoc_url="/redoc" if settings.debug else None
+    debug=True,  # FORCE debug mode for now
+    docs_url="/docs",  # ALWAYS enable docs
+    redoc_url="/redoc"  # ALWAYS enable redoc
 )
 
 # Add CORS middleware
@@ -48,8 +48,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Add trusted host middleware for security
-if not settings.debug:
+# Add trusted host middleware for security (only in production)
+if not settings.debug and hasattr(settings, 'debug') and not settings.debug:
     app.add_middleware(
         TrustedHostMiddleware,
         allowed_hosts=["localhost", "127.0.0.1", "*.herokuapp.com", "*.render.com"]
@@ -105,8 +105,8 @@ async def general_exception_handler(request: Request, exc: Exception):
         }
     )
 
-# Include API routes
-app.include_router(router, prefix=f"/api/{settings.api_version}")
+# Include API routes - FIXED: Use explicit version
+app.include_router(router, prefix="/api/v1", tags=["Plant Disease Detection"])
 
 # Root endpoint
 @app.get("/")
@@ -115,11 +115,20 @@ async def root():
     return {
         "message": f"Welcome to {settings.app_name}",
         "version": settings.app_version,
-        "api_version": settings.api_version,
-        "docs_url": "/docs" if settings.debug else "Documentation disabled in production",
+        "api_version": "v1",  # EXPLICIT version
+        "docs_url": "/docs",
         "model_status": "loaded" if predictor.model_loaded else "not_loaded",
         "supported_classes": len(predictor.class_names),
-        "timestamp": time.time()
+        "timestamp": time.time(),
+        "available_endpoints": {
+            "health": "/api/v1/health",
+            "predict": "/api/v1/predict", 
+            "debug_prediction": "/api/v1/debug-prediction",
+            "test_preprocessing": "/api/v1/test-preprocessing",
+            "model_debug": "/api/v1/model/debug",
+            "classes": "/api/v1/classes",
+            "model_info": "/api/v1/model/info"
+        }
     }
 
 # Health check endpoint (duplicate for load balancers)
@@ -137,9 +146,11 @@ async def health():
 async def startup_event():
     """Initialize application on startup."""
     logger.info(f"Starting {settings.app_name} v{settings.app_version}")
-    logger.info(f"Debug mode: {settings.debug}")
+    logger.info(f"Debug mode: True (forced for development)")
     logger.info(f"Model loaded: {predictor.model_loaded}")
     logger.info(f"Supported classes: {len(predictor.class_names)}")
+    logger.info(f"API docs available at: /docs")
+    logger.info(f"API endpoints available at: /api/v1/")
     
     # Create necessary directories
     os.makedirs("logs", exist_ok=True)
@@ -155,8 +166,8 @@ async def shutdown_event():
 if __name__ == "__main__":
     uvicorn.run(
         "app.main:app",
-        host=settings.host,
-        port=settings.port,
-        reload=settings.debug,
-        log_level=settings.log_level.lower()
+        host="0.0.0.0",  # EXPLICIT host
+        port=8000,       # EXPLICIT port
+        reload=True,     # FORCE reload for development
+        log_level="info" # EXPLICIT log level
     )
