@@ -1117,3 +1117,50 @@
 2025-06-24 00:03:46,531 - app.main - INFO - Response: 200 - 0.000s
 2025-06-24 00:03:46,578 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
 2025-06-24 00:03:46,579 - app.main - INFO - Response: 200 - 0.001s
+2025-06-24 00:14:03,202 - app.main - INFO - Request: GET http://localhost:8000/health
+2025-06-24 00:14:03,202 - app.main - INFO - Response: 200 - 0.000s
+2025-06-24 00:14:03,204 - app.main - INFO - Request: GET http://localhost:8000/api/v1/model/info
+2025-06-24 00:14:03,204 - app.main - INFO - Response: 200 - 0.000s
+2025-06-24 00:14:03,207 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-24 00:14:03,207 - app.main - INFO - Response: 200 - 0.000s
+2025-06-24 00:14:03,257 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-24 00:14:03,257 - app.main - INFO - Response: 200 - 0.000s
+2025-06-24 00:17:00,869 - app.main - INFO - Request: GET http://localhost:8000/health
+2025-06-24 00:17:00,871 - app.main - INFO - Response: 200 - 0.002s
+2025-06-24 00:17:00,872 - app.main - INFO - Request: GET http://localhost:8000/api/v1/model/info
+2025-06-24 00:17:00,873 - app.main - INFO - Response: 200 - 0.001s
+2025-06-24 00:17:00,875 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-24 00:17:00,875 - app.main - INFO - Response: 200 - 0.000s
+2025-06-24 00:17:00,926 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-24 00:17:00,926 - app.main - INFO - Response: 200 - 0.000s
+2025-06-24 00:18:20,854 - app.main - INFO - Request: GET http://localhost:8000/health
+2025-06-24 00:18:20,855 - app.main - INFO - Response: 200 - 0.001s
+2025-06-24 00:18:20,857 - app.main - INFO - Request: GET http://localhost:8000/api/v1/model/info
+2025-06-24 00:18:20,857 - app.main - INFO - Response: 200 - 0.000s
+2025-06-24 00:18:20,859 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-24 00:18:20,859 - app.main - INFO - Response: 200 - 0.000s
+2025-06-24 00:18:20,904 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-24 00:18:20,904 - app.main - INFO - Response: 200 - 0.000s
+2025-06-24 00:24:55,479 - app.main - INFO - Request: GET http://localhost:8000/health
+2025-06-24 00:24:55,479 - app.main - INFO - Response: 200 - 0.001s
+2025-06-24 00:24:55,481 - app.main - INFO - Request: GET http://localhost:8000/api/v1/model/info
+2025-06-24 00:24:55,481 - app.main - INFO - Response: 200 - 0.000s
+2025-06-24 00:24:55,483 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-24 00:24:55,483 - app.main - INFO - Response: 200 - 0.000s
+2025-06-24 00:24:55,535 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-24 00:24:55,536 - app.main - INFO - Response: 200 - 0.001s
+2025-06-24 01:19:41,357 - app.main - INFO - Request: GET http://localhost:8000/health
+2025-06-24 01:19:41,360 - app.main - INFO - Response: 200 - 0.003s
+2025-06-24 01:19:41,363 - app.main - INFO - Request: GET http://localhost:8000/api/v1/model/info
+2025-06-24 01:19:41,364 - app.main - INFO - Response: 200 - 0.000s
+2025-06-24 01:19:41,366 - app.main - INFO - Request: GET http://localhost:8000/api/v1/stats
+2025-06-24 01:19:41,366 - app.main - INFO - Response: 200 - 0.001s
+2025-06-24 01:19:41,415 - app.main - INFO - Request: GET http://localhost:8000/api/v1/classes
+2025-06-24 01:19:41,415 - app.main - INFO - Response: 200 - 0.000s
+2025-06-24 01:28:10,923 - app.main - INFO - Shutting down application
+2025-06-24 01:28:15,232 - app.main - INFO - Starting Phytocognix API v1.0.0
+2025-06-24 01:28:15,232 - app.main - INFO - Debug mode: True (forced for development)
+2025-06-24 01:28:15,232 - app.main - INFO - Model loaded: True
+2025-06-24 01:28:15,232 - app.main - INFO - Supported classes: 38
+2025-06-24 01:28:15,232 - app.main - INFO - API docs available at: /docs
+2025-06-24 01:28:15,233 - app.main - INFO - API endpoints available at: /api/v1/

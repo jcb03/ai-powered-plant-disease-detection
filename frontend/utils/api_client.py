@@ -260,9 +260,9 @@ class APIClient:
 def get_api_client() -> APIClient:
     """Get configured API client with caching."""
     try:
-        api_url = st.secrets.get("API_URL", "http://localhost:8000")
+        api_url = st.secrets.get("API_URL", "https://phytocognix-backend.onrender.com")
     except:
         # Fallback if secrets file doesn't exist
-        api_url = os.environ.get("API_URL", "http://localhost:8000")
+        api_url = os.environ.get("API_URL", "https://phytocognix-backend.onrender.com")
     
     return APIClient(api_url)
