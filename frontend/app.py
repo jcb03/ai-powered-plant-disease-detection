@@ -57,6 +57,7 @@ def load_css():
         margin: 1rem 0;
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         text-align: center;
+        color: black !important;        
     }
     
     .prediction-card {
@@ -83,6 +84,7 @@ def load_css():
         border-radius: 8px;
         border: 1px solid #c3e6cb;
         margin: 1rem 0;
+        color: black !important;        
     }
     
     .treatment-section {
@@ -90,7 +92,7 @@ def load_css():
         padding: 1rem;
         border-radius: 8px;
         margin: 1rem 0;
-        border-left: 4px solid #007bff;       
+        border-left: 4px solid #007bff;               
     }
     
     .warning-section {
