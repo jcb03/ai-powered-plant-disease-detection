@@ -134,6 +134,113 @@ def load_css():
     </style>
     """, unsafe_allow_html=True)
 
+
+def add_custom_footer():
+    """Add custom footer with social links."""
+    footer_html = """
+    <style>
+    /* Hide Streamlit footer */
+    .css-h5rgaw.egzxvld1 {visibility: hidden;}
+    .css-cio0dv.egzxvld1 {visibility: hidden;}
+    footer {visibility: hidden;}
+    .stApp > footer {visibility: hidden;}
+    #MainMenu {visibility: hidden;}
+    
+    /* Custom footer styling */
+    .custom-footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        text-align: center;
+        padding: 15px 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+        z-index: 999;
+    }
+    
+    .footer-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    
+    .footer-text {
+        font-size: 16px;
+        font-weight: 500;
+    }
+    
+    .footer-links {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }
+    
+    .footer-link {
+        color: white;
+        text-decoration: none;
+        padding: 8px 15px;
+        border-radius: 20px;
+        background: rgba(255,255,255,0.1);
+        transition: all 0.3s ease;
+        font-weight: 500;
+        border: 1px solid rgba(255,255,255,0.2);
+    }
+    
+    .footer-link:hover {
+        background: rgba(255,255,255,0.2);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        color: white;
+        text-decoration: none;
+    }
+    
+    .linkedin { border-color: #00A4EF; }
+    .linkedin:hover { background: #0077B5; }
+    
+    .microsoft { border-color: #00A4EF; }
+    .microsoft:hover { background: #00A4EF; }
+    
+    .github { border-color: #00A4EF; }
+    .github:hover { background: #333; }
+    
+    @media (max-width: 768px) {
+        .footer-content {
+            flex-direction: column;
+            gap: 10px;
+        }
+        .footer-links {
+            gap: 10px;
+        }
+        .footer-text {
+            font-size: 14px;
+        }
+    }
+    </style>
+    
+    <div class="custom-footer">
+        <div class="footer-content">
+            <span class="footer-text">Made by <strong>Jai Chaudhary</strong></span>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/jai-chaudhary-54bb86221/" target="_blank" class="footer-link linkedin">
+                    LinkedIn
+                </a>
+                <a href="https://learn.microsoft.com/en-us/users/jaichaudhary-6371/" target="_blank" class="footer-link microsoft">
+                    Microsoft Learn
+                </a>
+                <a href="https://github.com/jcb03/ai-powered-plant-disease-detection" target="_blank" class="footer-link github">
+                    GitHub
+                </a>
+            </div>
+        </div>
+    </div>
+    """
+    st.markdown(footer_html, unsafe_allow_html=True)
+
 def initialize_session_state():
     """Initialize session state variables."""
     if 'prediction_history' not in st.session_state:
@@ -429,6 +536,8 @@ def main():
     
     with tab4:
         render_analytics_tab()
+    # Add custom footer    
+    add_custom_footer()
 
 def render_disease_detection_tab():
     """Render the main disease detection interface."""
