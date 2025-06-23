@@ -11,7 +11,7 @@ def render_header():
     """Render the main application header."""
     st.markdown("""
     <div class="main-header">
-        <h1>🌱 AI-Powered Plant Disease Detection</h1>
+        <h1>🌱 Phytocognix - AI-Powered Plant Disease Detection</h1>
         <p>Upload or capture a photo of your plant leaf to get instant disease diagnosis and treatment recommendations</p>
     </div>
     """, unsafe_allow_html=True)

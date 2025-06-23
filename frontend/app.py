@@ -24,7 +24,7 @@ from utils.ui_components import (
 
 # Page configuration
 st.set_page_config(
-    page_title="🌱 Phytocognix-Plant Disease Detection",
+    page_title="🌱 Phytocognix - AI-Powered Plant Disease Detection",
     page_icon="🌱",
     layout="wide",
     initial_sidebar_state="expanded",

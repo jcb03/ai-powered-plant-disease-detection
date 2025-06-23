@@ -167,7 +167,7 @@ def render_about_page():
     with col3:
         st.markdown("""
         **🌐 Website**
-        www.plantdisease.ai
+        https://phytocognix.streamlit.app/
         
         **📱 Mobile App**
         Coming Soon!
