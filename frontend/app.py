@@ -181,7 +181,7 @@ def add_custom_footer():
     }
     
     .footer-link {
-        color: white;
+        color: black;
         text-decoration: none;
         padding: 8px 15px;
         border-radius: 20px;
